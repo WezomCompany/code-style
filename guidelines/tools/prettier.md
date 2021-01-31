@@ -44,6 +44,6 @@ npm i -D @wezom/eslint-config eslint-config-prettier
 
 --- 
 
-[🔙 Table of Contents](../index.md) | [🔝 Top](#markdown-header-)
+[🔙 Table of Contents](../index.md) | [🔝 Top](#readme)
 
 ---
