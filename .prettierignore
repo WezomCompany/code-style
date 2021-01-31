@@ -1,0 +1,4 @@
+lerna.json
+package.json
+package-lock.json
+packages/stylelint-config/tests/fixtures/*.invalid.css

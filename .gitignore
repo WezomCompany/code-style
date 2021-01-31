@@ -1,0 +1,5 @@
+*.log
+*.tgz
+.cache
+.idea
+node_modules

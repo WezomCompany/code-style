@@ -1,0 +1,1 @@
+# @wezom/stylelint-config

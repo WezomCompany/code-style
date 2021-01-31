@@ -1,0 +1,9 @@
+{
+	"rules": {
+		"declaration-colon-newline-after": null,
+		"declaration-no-important": true,
+		"indentation": "tab",
+		"selector-max-id": 0,
+		"selector-max-universal": null
+	}
+}
