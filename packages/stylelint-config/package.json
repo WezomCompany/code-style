@@ -7,9 +7,10 @@
     ".stylelintrc"
   ],
   "scripts": {
-    "test": "../../node_modules/.bin/jest",
-    "check-valid": "../../node_modules/.bin/stylelint \"./tests/fixtures/*.valid.css\"",
-    "check-invalid": "../../node_modules/.bin/stylelint \"./tests/fixtures/*.invalid.css\""
+    "auto-doc-rules": "node ../../utils/autoDocRules.js",
+    "test": "jest",
+    "check-valid": "stylelint \"./tests/fixtures/*.valid.css\"",
+    "check-invalid": "stylelint \"./tests/fixtures/*.invalid.css\""
   },
   "license": "BSD-3-Clause",
   "author": {

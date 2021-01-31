@@ -1,1 +1,5 @@
 # @wezom/stylelint-config
+
+## Rules
+
+
