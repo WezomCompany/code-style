@@ -45,6 +45,8 @@ Usage examples:
 }
 ```
 
+[🔙 Back to the README](README.md) | [🔝 Top](#readme)
+
 ---
 
 
@@ -79,12 +81,16 @@ a {
 }
 ```
 
+[🔙 Back to the README](README.md) | [🔝 Top](#readme)
+
 ---
 
 
 ### declaration-colon-newline-after
 
 Rule disabled
+
+[🔙 Back to the README](README.md) | [🔝 Top](#readme)
 
 ---
 
@@ -96,6 +102,8 @@ Value: `true`
 Usage examples:
 
 
+
+[🔙 Back to the README](README.md) | [🔝 Top](#readme)
 
 ---
 
@@ -122,6 +130,8 @@ Usage examples:
 }
 ```
 
+[🔙 Back to the README](README.md) | [🔝 Top](#readme)
+
 ---
 
 
@@ -132,6 +142,8 @@ Value: `0`
 Usage examples:
 
 
+
+[🔙 Back to the README](README.md) | [🔝 Top](#readme)
 
 ---
 

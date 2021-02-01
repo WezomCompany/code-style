@@ -105,7 +105,7 @@ const generateRulesDescription = (configRules, fixturesPaths) => {
 
 			return block.join('\n');
 		})
-		.join('\n\n---\n\n');
+		.join('\n\n[🔙 Back to the README](README.md) | [🔝 Top](#readme)\n\n---\n\n');
 };
 
 /**
