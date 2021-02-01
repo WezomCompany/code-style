@@ -154,3 +154,9 @@ Rule disabled
 
 [comment]: <> (RULES-END)
 
+---
+
+[🔙 Back to the README](README.md) | [🔝 Top](#readme)
+
+---
+
