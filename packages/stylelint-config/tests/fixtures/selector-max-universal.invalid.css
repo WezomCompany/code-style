@@ -1,0 +1,7 @@
+* {
+    color: blue;
+}
+
+.foo ~ * {
+    color: yellow;
+}

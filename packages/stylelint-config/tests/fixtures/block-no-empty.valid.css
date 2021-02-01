@@ -1,9 +1,0 @@
-a {
-	/* foo */
-}
-
-@media print {
-	a {
-		color: pink;
-	}
-}
