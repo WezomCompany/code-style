@@ -4,6 +4,7 @@
   "scripts": {
     "----------------------------- Lerna": "***",
     "lerna:test": "npm run prettier && lerna run test",
+    "lerna:auto-doc-rules": "lerna run auto-doc-rules",
     "lerna:upgrade": "lerna init",
     "lerna:bootstrap": "lerna bootstrap",
     "lerna:link": "lerna link convert",

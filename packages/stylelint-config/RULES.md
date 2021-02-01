@@ -42,7 +42,6 @@ _Usage examples_:
 }
 ```
 
-
 [🔙 Back to the README](README.md) | [🔝 Top](#readme)
 
 ---
@@ -89,7 +88,6 @@ _Usage examples_:
 }
 ```
 
-
 [🔙 Back to the README](README.md) | [🔝 Top](#readme)
 
 ---
@@ -112,7 +110,6 @@ _Usage examples_:
     color: yellow;
 }
 ```
-
 
 [comment]: <> (RULES-END)
 
