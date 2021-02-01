@@ -16,13 +16,9 @@ So we recommend that you install and use the Prettier configurations for Styleli
 npm i -D @wezom/stylelint-config stylelint-config-prettier
 ```
 
-```json5
-// .stylelintrc.json
+```json
 {
-  "extends": [
-    "@wezom/stylelint-config", 
-    "stylelint-config-prettier" // must be the last
-  ]
+	"extends": ["@wezom/stylelint-config", "stylelint-config-prettier"]
 }
 ```
 
@@ -32,17 +28,13 @@ npm i -D @wezom/stylelint-config stylelint-config-prettier
 npm i -D @wezom/eslint-config eslint-config-prettier
 ```
 
-```json5
-// .eslintrc.json
+```json
 {
-  "extends": [
-    "@wezom/eslint-config", 
-    "eslint-config-prettier" // must be the last
-  ]
+	"extends": ["@wezom/eslint-config", "eslint-config-prettier"]
 }
 ```
 
---- 
+---
 
 [🔙 Table of Contents](../index.md) | [🔝 Top](#readme)
 

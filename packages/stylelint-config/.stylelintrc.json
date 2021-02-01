@@ -1,6 +1,9 @@
 {
 	"extends": ["stylelint-config-recommended"],
 	"rules": {
+		"color-hex-length": null,
+		"comment-whitespace-inside": "always",
+		"declaration-block-single-line-max-declarations": 2,
 		"declaration-no-important": true,
 		"indentation": "tab",
 		"selector-max-id": 0,

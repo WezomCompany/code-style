@@ -119,7 +119,10 @@ const generateRulesDescription = (configRules, fixturesPaths) => {
 				if (typeof value === 'string') {
 					val = `\`"${value}"\``;
 				} else if (typeof value === 'object') {
-					val = '\n```json\n' + JSON.stringify(value, undefined, '    ') + '\n```';
+					val =
+						'\n```json\n' +
+						JSON.stringify(value, undefined, '    ') +
+						'\n```';
 				} else {
 					val = `\`${value}\``;
 				}
