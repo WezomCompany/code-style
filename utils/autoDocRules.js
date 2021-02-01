@@ -86,6 +86,22 @@ const getFixtureRuleContent = (rule, fixturesPaths) => {
 };
 
 /**
+ * @param {string} rule
+ * @param {Object} fixturesPaths
+ * @return {(string)[]}
+ */
+const getFixtureRuleDescription = (rule, fixturesPaths) => {
+	const field = rule + '.description';
+	if (fixturesPaths.hasOwnProperty(field)) {
+		const filepath = fixturesPaths[field];
+		if (fs.existsSync(filepath)) {
+			return [fs.readFileSync(filepath).toString()];
+		}
+	}
+	return [];
+};
+
+/**
  * @param {Object} configRules
  * @param {Object} fixturesPaths
  * @return {string}
@@ -98,8 +114,9 @@ const generateRulesDescription = (configRules, fixturesPaths) => {
 				block.push('Rule disabled');
 			} else {
 				const val = typeof value === 'string' ? '"' + value + '"' : value;
-				block.push(`Value: \`${val}\`\n`);
-				block.push(`Usage examples:`);
+				block.push(`_Value_: \`${val}\`\n`);
+				block.push(...getFixtureRuleDescription(rule, fixturesPaths));
+				block.push(`_Usage examples_:`);
 				block.push(...getFixtureRuleContent(rule, fixturesPaths));
 			}
 
