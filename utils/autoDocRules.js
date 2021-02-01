@@ -59,29 +59,6 @@ const generateTOC = (configRules) => {
 };
 
 /**
- * @param {Object} configRules
- * @param {Object} fixturesPaths
- * @return {string}
- */
-const generateRulesDescription = (configRules, fixturesPaths) => {
-	return Object.entries(configRules)
-		.map(([rule, value]) => {
-			const block = ['', `### ${rule}`, ''];
-			if (value === null) {
-				block.push('Rule disabled');
-			} else {
-				block.push('```json5', '// value');
-				block.push(typeof value === 'string' ? '"' + value + '"' : value);
-				block.push('```');
-				block.push(...getFixtureRuleContent(rule, fixturesPaths));
-			}
-
-			return block.join('\n');
-		})
-		.join('\n\n---\n\n');
-};
-
-/**
  * @param {string} rule
  * @param {Object} fixturesPaths
  * @return {(string|undefined)[]}
@@ -106,6 +83,28 @@ const getFixtureRuleContent = (rule, fixturesPaths) => {
 		getRuleFixtureCode(rule + '.invalid', false),
 		getRuleFixtureCode(rule + '.valid', true)
 	];
+};
+
+/**
+ * @param {Object} configRules
+ * @param {Object} fixturesPaths
+ * @return {string}
+ */
+const generateRulesDescription = (configRules, fixturesPaths) => {
+	return Object.entries(configRules)
+		.map(([rule, value]) => {
+			const block = ['', `### ${rule}`, ''];
+			if (value === null) {
+				block.push('Rule disabled');
+			} else {
+				const val = typeof value === 'string' ? '"' + value + '"' : value;
+				block.push(`Value: \`${val}\``);
+				block.push(...getFixtureRuleContent(rule, fixturesPaths));
+			}
+
+			return block.join('\n');
+		})
+		.join('\n\n---\n\n');
 };
 
 /**

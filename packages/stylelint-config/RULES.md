@@ -5,6 +5,7 @@ Table of Contents
 [comment]: <> (TOC-START)
 
 1. [at-rule-no-unknown](#at-rule-no-unknown)
+1. [block-no-empty](#block-no-empty)
 1. [declaration-colon-newline-after](#declaration-colon-newline-after)
 1. [declaration-no-important](#declaration-no-important)
 1. [indentation](#indentation)
@@ -22,12 +23,57 @@ Table of Contents
 
 ### at-rule-no-unknown
 
-```json5
-// value
-true
+Value: `true`
+
+🚧 Avoid
+
+```css
+@unknown {}
 ```
 
+👍 OK
 
+```css
+@charset "UTF-8";
+
+@media print {
+	@page :first {
+		margin: 2cm;
+	}
+}
+```
+
+---
+
+
+### block-no-empty
+
+Value: `true`
+
+🚧 Avoid
+
+```css
+a {}
+
+b { }
+
+@media print {
+}
+```
+
+👍 OK
+
+```css
+a {
+	/* foo */
+}
+
+@media print {
+	a {
+		color: pink;
+	}
+}
+```
 
 ---
 
@@ -41,10 +87,7 @@ Rule disabled
 
 ### declaration-no-important
 
-```json5
-// value
-true
-```
+Value: `true`
 
 
 
@@ -53,10 +96,7 @@ true
 
 ### indentation
 
-```json5
-// value
-"tab"
-```
+Value: `"tab"`
 
 🚧 Avoid
 
@@ -79,10 +119,7 @@ true
 
 ### selector-max-id
 
-```json5
-// value
-0
-```
+Value: `0`
 
 
 
