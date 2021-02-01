@@ -11,4 +11,4 @@ See [full list of extends with code examples](https://github.com/WezomCompany/co
 ## Usage
 
 We strongly recommend using this config with Prettier together.  
-See [description](https://github.com/WezomCompany/code-style/blob/main/guidelines/stylelint-config/tools/prettier.md).
+See [description](https://github.com/WezomCompany/code-style/blob/main/guidelines/tools/prettier.md).
