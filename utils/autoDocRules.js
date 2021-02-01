@@ -98,7 +98,8 @@ const generateRulesDescription = (configRules, fixturesPaths) => {
 				block.push('Rule disabled');
 			} else {
 				const val = typeof value === 'string' ? '"' + value + '"' : value;
-				block.push(`Value: \`${val}\``);
+				block.push(`Value: \`${val}\`\n`);
+				block.push(`Usage examples:`);
 				block.push(...getFixtureRuleContent(rule, fixturesPaths));
 			}
 

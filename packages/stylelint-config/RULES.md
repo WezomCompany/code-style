@@ -25,6 +25,8 @@ Table of Contents
 
 Value: `true`
 
+Usage examples:
+
 🚧 Avoid
 
 ```css
@@ -49,6 +51,8 @@ Value: `true`
 ### block-no-empty
 
 Value: `true`
+
+Usage examples:
 
 🚧 Avoid
 
@@ -89,6 +93,8 @@ Rule disabled
 
 Value: `true`
 
+Usage examples:
+
 
 
 ---
@@ -97,6 +103,8 @@ Value: `true`
 ### indentation
 
 Value: `"tab"`
+
+Usage examples:
 
 🚧 Avoid
 
@@ -120,6 +128,8 @@ Value: `"tab"`
 ### selector-max-id
 
 Value: `0`
+
+Usage examples:
 
 
 
