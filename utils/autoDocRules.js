@@ -78,7 +78,7 @@ const generateRulesDescription = (configRules, fixturesPaths) => {
 
 			return block.join('\n');
 		})
-		.join('\n');
+		.join('\n\n---\n\n');
 };
 
 /**

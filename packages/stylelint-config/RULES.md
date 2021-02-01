@@ -13,6 +13,8 @@ Table of Contents
 
 [comment]: <> (TOC-END)
 
+---
+
 ## Rules
 
 [comment]: <> (RULES-START)
@@ -27,9 +29,15 @@ true
 
 
 
+---
+
+
 ### declaration-colon-newline-after
 
 Rule disabled
+
+---
+
 
 ### declaration-no-important
 
@@ -38,6 +46,9 @@ Rule disabled
 true
 ```
 
+
+
+---
 
 
 ### indentation
@@ -63,6 +74,9 @@ true
 }
 ```
 
+---
+
+
 ### selector-max-id
 
 ```json5
@@ -70,6 +84,9 @@ true
 0
 ```
 
+
+
+---
 
 
 ### selector-max-universal
