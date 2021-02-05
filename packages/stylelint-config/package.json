@@ -4,7 +4,7 @@
 	"description": "Stylelint shareable config",
 	"main": ".stylelintrc.json",
 	"files": [
-		".stylelintrc"
+		".stylelintrc.json"
 	],
 	"scripts": {
 		"auto-doc-rules": "node ../../utils/autoDocRules.js && prettier ./RULES.md --write",

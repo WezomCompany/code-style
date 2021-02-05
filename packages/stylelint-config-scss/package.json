@@ -4,7 +4,7 @@
 	"description": "Stylelint shareable config for SCSS",
 	"main": ".stylelintrc.json",
 	"files": [
-		".stylelintrc"
+		".stylelintrc.json"
 	],
 	"scripts": {
 		"auto-doc-rules": "node ../../utils/autoDocRules.js && prettier ./RULES.md --write",
@@ -29,7 +29,7 @@
 		"access": "public"
 	},
 	"dependencies": {
-		"@wezom/stylelint-config": "^0.3.0-beta.0",
+		"@wezom/stylelint-config": "file:../stylelint-config",
 		"stylelint-scss": "^3.18.0"
 	}
 }

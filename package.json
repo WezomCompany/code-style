@@ -3,18 +3,22 @@
   "private": true,
   "scripts": {
     "----------------------------- Lerna": "***",
-    "lerna:test": "npm run prettier && lerna run test",
-    "lerna:test:autofix": "npm run prettier -- --write && lerna run test:autofix",
+    "lerna:test": "npm run prettier-utils && npm run prettier-guidelines && lerna run test",
+    "lerna:test:autofix": "npm run prettier-utils:fix && npm run prettier-guidelines:fix && lerna run test:autofix",
     "lerna:auto-doc-rules": "lerna run auto-doc-rules",
     "lerna:upgrade": "lerna init",
     "lerna:bootstrap": "lerna bootstrap",
     "lerna:link": "lerna link convert",
     "lerna:publish": "lerna publish",
     "----------------------------- Prettier": "***",
-    "prettier": "prettier . --check",
-    "prettier:fix": "prettier . --check --write"
+    "prettier-guidelines": "prettier ./guidelines --check",
+    "prettier-guidelines:fix": "npm run prettier-guidelines -- --write",
+    "prettier-utils": "prettier ./utils --check",
+    "prettier-utils:fix": "npm run prettier-utils -- --write"
   },
   "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.19.0",
     "from-cwd": "^1.0.1",
     "glob": "^7.1.6",
     "jest": "^26.6.3",
@@ -23,6 +27,7 @@
     "stylelint": "^13.9.0"
   },
   "dependencies": {
+    "@wezom/eslint-config": "file:packages\\eslint-config",
     "@wezom/stylelint-config": "file:packages\\stylelint-config",
     "@wezom/stylelint-config-scss": "file:packages\\stylelint-config-scss"
   }

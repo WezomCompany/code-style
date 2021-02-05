@@ -10,6 +10,8 @@ const glob = require('glob');
  */
 const getConfigPath = (folderPath) => {
 	switch (path.basename(folderPath)) {
+		case 'eslint-config':
+			return path.join(folderPath, '.eslintrc.json');
 		case 'stylelint-config':
 		case 'stylelint-config-scss':
 			return path.join(folderPath, '.stylelintrc.json');
@@ -29,6 +31,12 @@ const getConfigRules = (folderPath) => {
 };
 
 /**
+ * @param {string} name
+ * @return {string}
+ */
+const normalizeName = (name) => name.replace(/\//g, '___');
+
+/**
  * @param {string} folderPath
  * @return {Object}
  */
@@ -36,16 +44,22 @@ const getAllFixturesPaths = (folderPath) => {
 	const fixturesPath = path.join(folderPath, 'tests/fixtures/*');
 	return glob.sync(fixturesPath).reduce((acc, filepath) => {
 		const ext = path.extname(filepath);
-		acc[path.basename(filepath, ext)] = filepath;
+		acc[normalizeName(path.basename(filepath, ext))] = filepath;
 		return acc;
 	}, {});
 };
 
 /**
- * @param {string} folderPath
+ * @param {string} filepath
  * @return {string}
  */
-const getRulesContent = (folderPath) => {};
+const getFileContent = (filepath) => {
+	return fs
+		.readFileSync(filepath)
+		.toString()
+		.split('/* __AUTO-DOC-PRINT-AFTER__ */')
+		.pop();
+};
 
 /**
  * @param {Object} configRules
@@ -69,7 +83,7 @@ const getFixtureRuleContent = (rule, fixturesPaths) => {
 		if (fixturesPaths.hasOwnProperty(field)) {
 			const filepath = fixturesPaths[field];
 			if (fs.existsSync(filepath)) {
-				const code = fs.readFileSync(filepath).toString();
+				const code = getFileContent(filepath);
 				const lang = path.extname(filepath).slice(1);
 				return [
 					`\n${validCase ? '👍 OK' : '🚧 Avoid'}\n`,
@@ -81,8 +95,8 @@ const getFixtureRuleContent = (rule, fixturesPaths) => {
 	};
 
 	return [
-		getRuleFixtureCode(rule + '.invalid', false),
-		getRuleFixtureCode(rule + '.valid', true)
+		getRuleFixtureCode(normalizeName(rule + '.invalid'), false),
+		getRuleFixtureCode(normalizeName(rule + '.valid'), true)
 	].filter(Boolean);
 };
 
@@ -92,11 +106,11 @@ const getFixtureRuleContent = (rule, fixturesPaths) => {
  * @return {string[]}
  */
 const getFixtureRuleDescription = (rule, fixturesPaths) => {
-	const field = rule + '.description';
+	const field = rule.replace(/\//g, '___') + '.description';
 	if (fixturesPaths.hasOwnProperty(field)) {
 		const filepath = fixturesPaths[field];
 		if (fs.existsSync(filepath)) {
-			return [fs.readFileSync(filepath).toString()];
+			return [getFileContent(filepath)];
 		}
 	}
 	return [];
@@ -113,7 +127,7 @@ const generateRulesDescription = (configRules, fixturesPaths) => {
 			const block = ['', `### ${rule}`, ''];
 
 			// value
-			if (value === null) {
+			if (value === null || value === 'off') {
 				block.push('Rule disabled\n');
 			} else {
 				let val;
@@ -137,7 +151,7 @@ const generateRulesDescription = (configRules, fixturesPaths) => {
 			const examples = getFixtureRuleContent(rule, fixturesPaths);
 			if (examples.length) {
 				block.push(`_Usage examples_:`);
-				block.push(...getFixtureRuleContent(rule, fixturesPaths));
+				block.push(...examples);
 			}
 
 			return block.join('\n');
