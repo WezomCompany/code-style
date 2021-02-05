@@ -1,0 +1,11 @@
+a {
+	bottom: 15px;
+	top: 5px;
+}
+
+b {
+	--bottom: 15px;
+
+	bottom: var(--bottom);
+	top: 5px;
+}

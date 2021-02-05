@@ -26,8 +26,5 @@
 	],
 	"publishConfig": {
 		"access": "public"
-	},
-	"dependencies": {
-		"stylelint-config-recommended": "^3.0.0"
 	}
 }
