@@ -17,8 +17,6 @@
     "prettier-utils:fix": "npm run prettier-utils -- --write"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^4.14.2",
-    "@typescript-eslint/parser": "^4.14.2",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.19.0",
     "from-cwd": "^1.0.1",
