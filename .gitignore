@@ -2,4 +2,5 @@
 *.tgz
 .cache
 .idea
+.refs
 node_modules

@@ -11,6 +11,7 @@ const glob = require('glob');
 const getConfigPath = (folderPath) => {
 	switch (path.basename(folderPath)) {
 		case 'stylelint-config':
+		case 'stylelint-config-scss':
 			return path.join(folderPath, '.stylelintrc.json');
 	}
 	throw new Error('UNKNOWN CONFIG!!!');
