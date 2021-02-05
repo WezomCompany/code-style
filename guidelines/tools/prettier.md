@@ -10,6 +10,22 @@ We set up code style configs with the belief that they will be used in conjuncti
 
 So we recommend that you install and use the Prettier configurations for Stylelint and Eslint as an addition to our configurations. More info about integrations you can read in the [Prettier docs](https://prettier.io/docs/en/integrating-with-linters.html)
 
+## Recommended config
+
+```js
+module.exports = {
+	arrowParens: 'always',
+	bracketSpacing: true,
+	jsxBracketSameLine: false,
+	printWidth: 90,
+	semi: true,
+	singleQuote: true,
+	trailingComma: 'none',
+	tabWidth: 4,
+	useTabs: true
+};
+```
+
 ## Stylelint example
 
 ```bash
@@ -30,7 +46,7 @@ npm i -D @wezom/eslint-config eslint-config-prettier
 
 ```json
 {
-	"extends": ["@wezom/eslint-config", "eslint-config-prettier"]
+	"extends": ["@wezom/eslint-config", "prettier"]
 }
 ```
 
