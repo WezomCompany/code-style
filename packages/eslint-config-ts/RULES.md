@@ -1,6 +1,6 @@
 # @wezom/eslint-config-ts rules
 
-> These rules are in addition to the rules of the [@wezom/eslint-config](https://github.com/WezomCompany/code-style/blob/main/packages/eslint-config/RULES.md#readme)
+> These rules are in addition to the rules of the [@wezom/eslint-config](https://github.com/WezomCompany/code-style/blob/main/packages/eslint-config/RULES.md#readme) and [@typescript-eslint/recommended with @typescript-eslint/recommended-requiring-type-checking](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin#supported-rules)
 
 Table of Contents
 
@@ -151,7 +151,6 @@ export const arrowFn1 = (arg: string): string => `test ${arg}`;
 
 // All arguments should be typed
 export const arrowFn2 = (arg: string): string => `test ${arg}`;
-export const arrowFn3 = (arg: unknown): string => `test ${arg}`;
 
 // Class is not exported
 class Test {
@@ -173,91 +172,131 @@ _Value_:
 [
 	"error",
 	{
-		"selector": "property",
-		"modifiers": ["private"],
-		"format": ["camelCase"],
-		"leadingUnderscore": "require"
-	},
-	{
-		"selector": "parameterProperty",
+		"selector": "default",
 		"format": ["camelCase"]
-	},
-	{
-		"selector": "parameterProperty",
-		"modifiers": ["private"],
-		"format": ["camelCase"],
-		"leadingUnderscore": "require"
-	},
-	{
-		"selector": "method",
-		"format": ["camelCase"]
-	},
-	{
-		"selector": "method",
-		"modifiers": ["private"],
-		"format": ["camelCase"],
-		"leadingUnderscore": "require"
-	},
-	{
-		"selector": "accessor",
-		"format": ["camelCase"]
-	},
-	{
-		"selector": "accessor",
-		"modifiers": ["private"],
-		"format": ["camelCase"],
-		"leadingUnderscore": "require"
-	},
-	{
-		"selector": "enumMember",
-		"format": ["PascalCase"]
 	},
 	{
 		"selector": "variable",
-		"format": ["camelCase", "UPPER_CASE", "PascalCase"],
+		"format": ["camelCase", "UPPER_CASE"],
 		"leadingUnderscore": "allow"
 	},
 	{
-		"selector": "function",
-		"format": ["camelCase", "PascalCase"],
-		"leadingUnderscore": "allow"
+		"selector": "variable",
+		"modifiers": ["destructured"],
+		"format": null
 	},
 	{
 		"selector": "parameter",
-		"format": ["camelCase", "PascalCase"],
+		"format": ["camelCase"],
 		"leadingUnderscore": "allow"
 	},
 	{
-		"selector": "class",
+		"selector": "memberLike",
+		"modifiers": ["private"],
+		"format": ["camelCase"],
+		"leadingUnderscore": "require"
+	},
+	{
+		"selector": "typeLike",
 		"format": ["PascalCase"]
 	},
 	{
-		"selector": "class",
-		"modifiers": ["abstract"],
-		"format": ["PascalCase"],
-		"prefix": ["Abstract"]
-	},
-	{
-		"selector": "interface",
-		"format": ["PascalCase"]
-	},
-	{
-		"selector": "typeAlias",
-		"format": ["PascalCase"]
-	},
-	{
-		"selector": "typeParameter",
-		"format": ["PascalCase"]
-	},
-	{
-		"selector": "enum",
-		"format": ["PascalCase"],
-		"custom": {
-			"regex": "[a-z]List$",
-			"match": true
-		}
+		"selector": "enumMember",
+		"format": ["camelCase", "UPPER_CASE"]
 	}
 ]
+```
+
+Enforcing naming conventions helps keep the codebase consistent, and reduces overhead when thinking about how to name a variable. Additionally, a well-designed style guide can help communicate intent, such as by enforcing all private properties begin with an `_`, and all global-level constants are written in `UPPER_CASE`.
+
+_Usage examples_:
+
+👍 OK
+
+```ts
+// Variables
+
+const myVar = 5;
+const _myTempVar = 6;
+const MY_CONST = 7;
+
+// Variables destructured
+
+const obj = {};
+const { no_camel_case_destructured_var, camelCased } = obj;
+
+// Function parameter
+
+function foo(parameterName: boolean, _allowedUnderscore: boolean): void {
+	console.log(parameterName);
+	console.log(_allowedUnderscore);
+}
+
+// memberLike
+
+const obj2 = {
+	objProp: true,
+	objMethod(): void {
+		console.log(this.objProp);
+	}
+};
+
+class FooBar {
+	memberProp1: string;
+	memberProp2: string;
+
+	private _memberProp3 = 'xXx';
+
+	constructor(argValue1: string, argValue2: string) {
+		this.memberProp1 = argValue1;
+		this.memberProp2 = argValue2;
+	}
+
+	get memberProp(): string {
+		return `${this.memberProp1} ${this.memberProp2}`;
+	}
+
+	set memberProp(value: string) {
+		console.log(value);
+	}
+
+	printMemberProp(): void {
+		console.log(this.memberProp);
+	}
+
+	private _printPrivateMember(): void {
+		console.log(this._memberProp3);
+	}
+
+	static instanceTypeGuard(instance: any): instance is FooBar {
+		return instance instanceof FooBar;
+	}
+}
+
+// typeLike
+
+interface MyInterface {
+	myProp: boolean;
+	myMethod(): void;
+}
+
+type MyType = string;
+
+abstract class MyClass {}
+
+// enumMember
+
+enum MyList {
+	X,
+	Y,
+	Z
+}
+
+enum MySeasons {
+	mySeason1 = 'xXx',
+	mySeason2 = 'yYy',
+	mySeason3 = 'zZz'
+}
 ```
 
 [🔙 Back to the README](README.md) | [🔝 Top](#readme)

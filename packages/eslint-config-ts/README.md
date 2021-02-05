@@ -1,6 +1,6 @@
 # @wezom/eslint-config-ts
 
-_ESLint shareable config based on [@wezom/eslint-config](https://github.com/WezomCompany/code-style/blob/main/packages/eslint-config/README.md#readme)_
+_ESLint shareable config based on [@wezom/eslint-config](https://github.com/WezomCompany/code-style/blob/main/packages/eslint-config/README.md#readme) and [@typescript-eslint/recommended with @typescript-eslint/recommended-requiring-type-checking](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin#supported-rules)_
 
 ## Rules
 

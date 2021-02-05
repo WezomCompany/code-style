@@ -1,6 +1,14 @@
 {
-	"extends": ["@wezom/eslint-config"],
+	"extends": [
+		"@wezom/eslint-config",
+		"plugin:@typescript-eslint/recommended",
+		"plugin:@typescript-eslint/recommended-requiring-type-checking"
+	],
 	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"sourceType": "module",
+		"project": "./tsconfig.json"
+	},
 	"plugins": ["@typescript-eslint"],
 	"rules": {
 		"no-unused-vars": "off",
@@ -10,89 +18,37 @@
 		"@typescript-eslint/naming-convention": [
 			"error",
 			{
-				"selector": "property",
-				"modifiers": ["private"],
-				"format": ["camelCase"],
-				"leadingUnderscore": "require"
-			},
-			{
-				"selector": "parameterProperty",
+				"selector": "default",
 				"format": ["camelCase"]
-			},
-			{
-				"selector": "parameterProperty",
-				"modifiers": ["private"],
-				"format": ["camelCase"],
-				"leadingUnderscore": "require"
-			},
-			{
-				"selector": "method",
-				"format": ["camelCase"]
-			},
-			{
-				"selector": "method",
-				"modifiers": ["private"],
-				"format": ["camelCase"],
-				"leadingUnderscore": "require"
-			},
-			{
-				"selector": "accessor",
-				"format": ["camelCase"]
-			},
-			{
-				"selector": "accessor",
-				"modifiers": ["private"],
-				"format": ["camelCase"],
-				"leadingUnderscore": "require"
-			},
-			{
-				"selector": "enumMember",
-				"format": ["PascalCase"]
 			},
 			{
 				"selector": "variable",
-				"format": ["camelCase", "UPPER_CASE", "PascalCase"],
+				"format": ["camelCase", "UPPER_CASE"],
 				"leadingUnderscore": "allow"
 			},
 			{
-				"selector": "function",
-				"format": ["camelCase", "PascalCase"],
-				"leadingUnderscore": "allow"
+				"selector": "variable",
+				"modifiers": ["destructured"],
+				"format": null
 			},
 			{
 				"selector": "parameter",
-				"format": ["camelCase", "PascalCase"],
+				"format": ["camelCase"],
 				"leadingUnderscore": "allow"
 			},
 			{
-				"selector": "class",
+				"selector": "memberLike",
+				"modifiers": ["private"],
+				"format": ["camelCase"],
+				"leadingUnderscore": "require"
+			},
+			{
+				"selector": "typeLike",
 				"format": ["PascalCase"]
 			},
 			{
-				"selector": "class",
-				"modifiers": ["abstract"],
-				"format": ["PascalCase"],
-				"prefix": ["Abstract"]
-			},
-			{
-				"selector": "interface",
-				"format": ["PascalCase"]
-			},
-			{
-				"selector": "typeAlias",
-				"format": ["PascalCase"]
-			},
-			{
-				"selector": "typeParameter",
-				"format": ["PascalCase"]
-			},
-			{
-				"selector": "enum",
-				"format": ["PascalCase"],
-				"custom": {
-					"regex": "[a-z]List$",
-					"match": true
-				}
+				"selector": "enumMember",
+				"format": ["camelCase", "UPPER_CASE"]
 			}
 		],
 		"@typescript-eslint/no-empty-interface": "off",
