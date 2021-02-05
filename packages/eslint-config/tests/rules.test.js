@@ -1,49 +1,30 @@
-const fs = require('fs');
 const path = require('path');
-const stylelint = require('stylelint');
-const config = require('../.stylelintrc.json');
+const eslint = require('eslint');
 const getFixtures = require('../../../utils/getFixtures');
+const printIfErrors = require('../../../utils/printIfErrors');
 
 describe('Rules', () => {
-	const { valid, invalid } = getFixtures('tests/fixtures/*.css');
+	const cli = new eslint.CLIEngine({
+		useEslintrc: false,
+		configFile: '.eslintrc.dev.js'
+	});
+	const { valid, invalid } = getFixtures('tests/fixtures/*.js');
 	describe('Valid cases', () => {
 		valid.forEach((file) => {
-			const code = fs.readFileSync(file).toString('utf-8');
 			const fileName = path.basename(file);
-			describe(fileName, () => {
-				let result;
-
-				beforeEach(() => {
-					result = stylelint.lint({ code, config });
-				});
-
-				test('did not error', () => {
-					return result.then((data) => expect(data.errored).toBeFalsy());
-				});
-
-				test('flags no warnings', () => {
-					return result.then((data) =>
-						expect(data.results[0].warnings).toHaveLength(0)
-					);
-				});
+			test(fileName, () => {
+				const result = cli.executeOnFiles(file);
+				printIfErrors(result);
+				expect(result.errorCount).toEqual(0);
 			});
 		});
 	});
-
 	describe('Invalid cases', () => {
 		invalid.forEach((file) => {
-			const code = fs.readFileSync(file).toString('utf-8');
 			const fileName = path.basename(file);
-			describe(fileName, () => {
-				let result;
-
-				beforeEach(() => {
-					result = stylelint.lint({ code, config });
-				});
-
-				test('did error', () => {
-					return result.then((data) => expect(data.errored).toBeTruthy());
-				});
+			test(fileName, () => {
+				const result = cli.executeOnFiles(file);
+				expect(result.errorCount).toBeGreaterThan(0);
 			});
 		});
 	});

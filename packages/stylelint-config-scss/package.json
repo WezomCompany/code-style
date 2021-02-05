@@ -9,7 +9,7 @@
 	"scripts": {
 		"auto-doc-rules": "node ../../utils/autoDocRules.js && prettier ./RULES.md --write",
 		"test": "jest",
-		"test:autofix": "stylelint \"./tests/fixtures/*.valid.scss\" --fix",
+		"test:autofix": "stylelint \"./tests/fixtures/*.valid.scss\" --fix && jest",
 		"check-valid": "stylelint \"./tests/fixtures/*.valid.scss\"",
 		"check-invalid": "stylelint \"./tests/fixtures/*.invalid.scss\""
 	},

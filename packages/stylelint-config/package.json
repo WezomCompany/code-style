@@ -9,7 +9,7 @@
 	"scripts": {
 		"auto-doc-rules": "node ../../utils/autoDocRules.js && prettier ./RULES.md --write",
 		"test": "jest",
-		"test:autofix": "stylelint \"./tests/fixtures/*.valid.css\" --fix",
+		"test:autofix": "stylelint \"./tests/fixtures/*.valid.css\" --fix && jest",
 		"check-valid": "stylelint \"./tests/fixtures/*.valid.css\"",
 		"check-invalid": "stylelint \"./tests/fixtures/comment-whitespace-inside.invalid.css\""
 	},
