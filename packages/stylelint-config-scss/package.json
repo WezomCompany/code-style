@@ -1,13 +1,13 @@
 {
 	"name": "@wezom/stylelint-config-scss",
-	"version": "0.2.0-beta",
+	"version": "0.3.0-beta.0",
 	"description": "Stylelint shareable config for SCSS",
 	"main": ".stylelintrc.json",
 	"files": [
 		".stylelintrc"
 	],
 	"scripts": {
-    "auto-doc-rules": "node ../../utils/autoDocRules.js && prettier ./RULES.md --write",
+		"auto-doc-rules": "node ../../utils/autoDocRules.js && prettier ./RULES.md --write",
 		"test": "jest",
 		"test:autofix": "stylelint \"./tests/fixtures/*.valid.scss\" --fix",
 		"check-valid": "stylelint \"./tests/fixtures/*.valid.scss\"",
@@ -23,13 +23,13 @@
 		"code-style",
 		"stylelint",
 		"stylelintconfig",
-    "scss"
+		"scss"
 	],
 	"publishConfig": {
 		"access": "public"
 	},
 	"dependencies": {
-    "@wezom/stylelint-config": "^0.2.0-beta",
+		"@wezom/stylelint-config": "^0.3.0-beta.0",
 		"stylelint-scss": "^3.18.0"
 	}
 }
