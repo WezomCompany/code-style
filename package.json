@@ -23,6 +23,7 @@
     "stylelint": "^13.9.0"
   },
   "dependencies": {
-    "@wezom/stylelint-config": "file:packages\\stylelint-config"
+    "@wezom/stylelint-config": "file:packages\\stylelint-config",
+    "@wezom/stylelint-config-scss": "file:packages\\stylelint-config-scss"
   }
 }
