@@ -11,6 +11,7 @@ Table of Contents
 1. [default-case-last](#default-case-last)
 1. [dot-notation](#dot-notation)
 1. [eqeqeq](#eqeqeq)
+1. [for-direction](#for-direction)
 1. [lines-between-class-members](#lines-between-class-members)
 1. [new-cap](#new-cap)
 1. [no-array-constructor](#no-array-constructor)
@@ -27,6 +28,7 @@ Table of Contents
 1. [no-delete-var](#no-delete-var)
 1. [no-dupe-args](#no-dupe-args)
 1. [no-dupe-class-members](#no-dupe-class-members)
+1. [no-dupe-else-if](#no-dupe-else-if)
 1. [no-dupe-keys](#no-dupe-keys)
 1. [no-duplicate-case](#no-duplicate-case)
 1. [no-extra-boolean-cast](#no-extra-boolean-cast)
@@ -49,7 +51,6 @@ Table of Contents
 1. [no-lone-blocks](#no-lone-blocks)
 1. [no-loss-of-precision](#no-loss-of-precision)
 1. [no-misleading-character-class](#no-misleading-character-class)
-1. [no-useless-catch](#no-useless-catch)
 1. [no-multi-str](#no-multi-str)
 1. [no-new](#no-new)
 1. [no-new-func](#no-new-func)
@@ -85,6 +86,7 @@ Table of Contents
 1. [no-use-before-define](#no-use-before-define)
 1. [no-useless-backreference](#no-useless-backreference)
 1. [no-useless-call](#no-useless-call)
+1. [no-useless-catch](#no-useless-catch)
 1. [no-useless-computed-key](#no-useless-computed-key)
 1. [no-useless-constructor](#no-useless-constructor)
 1. [no-useless-escape](#no-useless-escape)
@@ -216,6 +218,38 @@ _Value_:
 		"null": "ignore"
 	}
 ]
+```
+
+[🔙 Back to the README](README.md) | [🔝 Top](#readme)
+
+---
+
+### for-direction
+
+_Value_: `"error"`
+
+A `for` loop with a stop condition that can never be reached, such as one with a counter that moves in the wrong direction, will run infinitely. While there are occasions when an infinite loop is intended, the convention is to construct such loops as `while` loops. More typically, an infinite for loop is a bug.
+
+_Usage examples_:
+
+🚧 Avoid
+
+```js
+for (let i = 0; i < 10; i--) {
+	console.log(i);
+}
+
+for (let i = 10; i >= 0; i++) {
+	console.log(i);
+}
+```
+
+👍 OK
+
+```js
+for (let i = 0; i < 10; i++) {
+	console.log(i);
+}
 ```
 
 [🔙 Back to the README](README.md) | [🔝 Top](#readme)
@@ -373,6 +407,14 @@ _Value_: `"error"`
 ---
 
 ### no-dupe-class-members
+
+_Value_: `"error"`
+
+[🔙 Back to the README](README.md) | [🔝 Top](#readme)
+
+---
+
+### no-dupe-else-if
 
 _Value_: `"error"`
 
@@ -568,14 +610,6 @@ _Value_: `"error"`
 ---
 
 ### no-misleading-character-class
-
-_Value_: `"error"`
-
-[🔙 Back to the README](README.md) | [🔝 Top](#readme)
-
----
-
-### no-useless-catch
 
 _Value_: `"error"`
 
@@ -921,6 +955,14 @@ _Value_: `"error"`
 ---
 
 ### no-useless-call
+
+_Value_: `"error"`
+
+[🔙 Back to the README](README.md) | [🔝 Top](#readme)
+
+---
+
+### no-useless-catch
 
 _Value_: `"error"`
 
