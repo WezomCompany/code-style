@@ -1,15 +1,41 @@
 {
-	"extends": [
-		"@wezom/eslint-config",
-		"plugin:@typescript-eslint/recommended",
-		"plugin:@typescript-eslint/recommended-requiring-type-checking"
-	],
+	"extends": ["@wezom/eslint-config"],
 	"parser": "@typescript-eslint/parser",
 	"plugins": ["@typescript-eslint"],
 	"rules": {
+		"constructor-super": "off",
+		"getter-return": "off",
+		"no-array-constructor": "off",
+		"no-const-assign": "off",
+		"no-dupe-args": "off",
+		"no-dupe-class-members": "off",
+		"no-dupe-keys": "off",
+		"no-empty-function": "off",
+		"no-extra-semi": "off",
+		"no-func-assign": "off",
+		"no-implied-eval": "off",
+		"no-import-assign": "off",
+		"no-new-symbol": "off",
+		"no-obj-calls": "off",
+		"no-redeclare": "off",
+		"no-setter-return": "off",
+		"no-this-before-super": "off",
+		"no-undef": "off",
+		"no-unreachable": "off",
+		"no-unsafe-negation": "off",
 		"no-unused-vars": "off",
+		"no-var": "error",
 		"no-use-before-define": "off",
+		"prefer-const": "error",
+		"prefer-rest-params": "error",
+		"prefer-spread": "error",
+		"require-await": "off",
+		"valid-typeof": "off",
 
+		"@typescript-eslint/adjacent-overload-signatures": "error",
+		"@typescript-eslint/await-thenable": "error",
+		"@typescript-eslint/ban-ts-comment": "error",
+		"@typescript-eslint/ban-types": "error",
 		"@typescript-eslint/explicit-function-return-type": "error",
 		"@typescript-eslint/explicit-module-boundary-types": "error",
 		"@typescript-eslint/naming-convention": [
@@ -53,9 +79,31 @@
 				"format": ["camelCase", "UPPER_CASE"]
 			}
 		],
+		"@typescript-eslint/no-array-constructor": "error",
+		"@typescript-eslint/no-empty-function": "error",
 		"@typescript-eslint/no-empty-interface": "off",
 		"@typescript-eslint/no-explicit-any": "off",
+		"@typescript-eslint/no-extra-non-null-assertion": "error",
+		"@typescript-eslint/no-extra-semi": "error",
+		"@typescript-eslint/no-floating-promises": "error",
+		"@typescript-eslint/no-for-in-array": "error",
+		"@typescript-eslint/no-implied-eval": "error",
+		"@typescript-eslint/no-inferrable-types": "error",
+		"@typescript-eslint/no-misused-new": "error",
+		"@typescript-eslint/no-misused-promises": "error",
+		"@typescript-eslint/no-namespace": "error",
+		"@typescript-eslint/no-non-null-asserted-optional-chain": "error",
+		"@typescript-eslint/no-non-null-assertion": "error",
+		"@typescript-eslint/no-this-alias": "error",
 		"@typescript-eslint/no-var-requires": "off",
+		"@typescript-eslint/prefer-as-const": "error",
+		"@typescript-eslint/prefer-namespace-keyword": "error",
+		"@typescript-eslint/triple-slash-reference": "error",
+		"@typescript-eslint/no-unsafe-assignment": "error",
+		"@typescript-eslint/no-unsafe-call": "error",
+		"@typescript-eslint/no-unsafe-member-access": "error",
+		"@typescript-eslint/no-unsafe-return": "error",
+		"@typescript-eslint/no-unnecessary-type-assertion": "error",
 		"@typescript-eslint/no-unused-vars": [
 			"error",
 			{
@@ -64,6 +112,11 @@
 				"caughtErrors": "all"
 			}
 		],
-		"@typescript-eslint/no-use-before-define": "error"
+		"@typescript-eslint/no-use-before-define": "error",
+		"@typescript-eslint/prefer-regexp-exec": "error",
+		"@typescript-eslint/require-await": "error",
+		"@typescript-eslint/restrict-plus-operands": "error",
+		"@typescript-eslint/restrict-template-expressions": "error",
+		"@typescript-eslint/unbound-method": "error"
 	}
 }

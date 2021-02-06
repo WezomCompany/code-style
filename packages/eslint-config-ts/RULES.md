@@ -1,21 +1,78 @@
 # @wezom/eslint-config-ts rules
 
-> These rules are in addition to the rules of the [@wezom/eslint-config](https://github.com/WezomCompany/code-style/blob/main/packages/eslint-config/RULES.md#readme) and the [@typescript-eslint/recommended with @typescript-eslint/recommended-requiring-type-checking](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin#supported-rules)
+> These rules are in addition to the rules of the [@wezom/eslint-config](https://github.com/WezomCompany/code-style/blob/main/packages/eslint-config/RULES.md#readme)
 
 Table of Contents
 
 [comment]: <> (TOC-START)
 
+1. [constructor-super](#constructor-super)
+1. [getter-return](#getter-return)
+1. [no-array-constructor](#no-array-constructor)
+1. [no-const-assign](#no-const-assign)
+1. [no-dupe-args](#no-dupe-args)
+1. [no-dupe-class-members](#no-dupe-class-members)
+1. [no-dupe-keys](#no-dupe-keys)
+1. [no-empty-function](#no-empty-function)
+1. [no-extra-semi](#no-extra-semi)
+1. [no-func-assign](#no-func-assign)
+1. [no-implied-eval](#no-implied-eval)
+1. [no-import-assign](#no-import-assign)
+1. [no-new-symbol](#no-new-symbol)
+1. [no-obj-calls](#no-obj-calls)
+1. [no-redeclare](#no-redeclare)
+1. [no-setter-return](#no-setter-return)
+1. [no-this-before-super](#no-this-before-super)
+1. [no-undef](#no-undef)
+1. [no-unreachable](#no-unreachable)
+1. [no-unsafe-negation](#no-unsafe-negation)
 1. [no-unused-vars](#no-unused-vars)
+1. [no-var](#no-var)
 1. [no-use-before-define](#no-use-before-define)
+1. [prefer-const](#prefer-const)
+1. [prefer-rest-params](#prefer-rest-params)
+1. [prefer-spread](#prefer-spread)
+1. [require-await](#require-await)
+1. [valid-typeof](#valid-typeof)
+1. [@typescript-eslint/adjacent-overload-signatures](#@typescript-eslint/adjacent-overload-signatures)
+1. [@typescript-eslint/await-thenable](#@typescript-eslint/await-thenable)
+1. [@typescript-eslint/ban-ts-comment](#@typescript-eslint/ban-ts-comment)
+1. [@typescript-eslint/ban-types](#@typescript-eslint/ban-types)
 1. [@typescript-eslint/explicit-function-return-type](#@typescript-eslint/explicit-function-return-type)
 1. [@typescript-eslint/explicit-module-boundary-types](#@typescript-eslint/explicit-module-boundary-types)
 1. [@typescript-eslint/naming-convention](#@typescript-eslint/naming-convention)
+1. [@typescript-eslint/no-array-constructor](#@typescript-eslint/no-array-constructor)
+1. [@typescript-eslint/no-empty-function](#@typescript-eslint/no-empty-function)
 1. [@typescript-eslint/no-empty-interface](#@typescript-eslint/no-empty-interface)
 1. [@typescript-eslint/no-explicit-any](#@typescript-eslint/no-explicit-any)
+1. [@typescript-eslint/no-extra-non-null-assertion](#@typescript-eslint/no-extra-non-null-assertion)
+1. [@typescript-eslint/no-extra-semi](#@typescript-eslint/no-extra-semi)
+1. [@typescript-eslint/no-floating-promises](#@typescript-eslint/no-floating-promises)
+1. [@typescript-eslint/no-for-in-array](#@typescript-eslint/no-for-in-array)
+1. [@typescript-eslint/no-implied-eval](#@typescript-eslint/no-implied-eval)
+1. [@typescript-eslint/no-inferrable-types](#@typescript-eslint/no-inferrable-types)
+1. [@typescript-eslint/no-misused-new](#@typescript-eslint/no-misused-new)
+1. [@typescript-eslint/no-misused-promises](#@typescript-eslint/no-misused-promises)
+1. [@typescript-eslint/no-namespace](#@typescript-eslint/no-namespace)
+1. [@typescript-eslint/no-non-null-asserted-optional-chain](#@typescript-eslint/no-non-null-asserted-optional-chain)
+1. [@typescript-eslint/no-non-null-assertion](#@typescript-eslint/no-non-null-assertion)
+1. [@typescript-eslint/no-this-alias](#@typescript-eslint/no-this-alias)
 1. [@typescript-eslint/no-var-requires](#@typescript-eslint/no-var-requires)
+1. [@typescript-eslint/prefer-as-const](#@typescript-eslint/prefer-as-const)
+1. [@typescript-eslint/prefer-namespace-keyword](#@typescript-eslint/prefer-namespace-keyword)
+1. [@typescript-eslint/triple-slash-reference](#@typescript-eslint/triple-slash-reference)
+1. [@typescript-eslint/no-unsafe-assignment](#@typescript-eslint/no-unsafe-assignment)
+1. [@typescript-eslint/no-unsafe-call](#@typescript-eslint/no-unsafe-call)
+1. [@typescript-eslint/no-unsafe-member-access](#@typescript-eslint/no-unsafe-member-access)
+1. [@typescript-eslint/no-unsafe-return](#@typescript-eslint/no-unsafe-return)
+1. [@typescript-eslint/no-unnecessary-type-assertion](#@typescript-eslint/no-unnecessary-type-assertion)
 1. [@typescript-eslint/no-unused-vars](#@typescript-eslint/no-unused-vars)
 1. [@typescript-eslint/no-use-before-define](#@typescript-eslint/no-use-before-define)
+1. [@typescript-eslint/prefer-regexp-exec](#@typescript-eslint/prefer-regexp-exec)
+1. [@typescript-eslint/require-await](#@typescript-eslint/require-await)
+1. [@typescript-eslint/restrict-plus-operands](#@typescript-eslint/restrict-plus-operands)
+1. [@typescript-eslint/restrict-template-expressions](#@typescript-eslint/restrict-template-expressions)
+1. [@typescript-eslint/unbound-method](#@typescript-eslint/unbound-method)
 
 [comment]: <> (TOC-END)
 
@@ -25,6 +82,166 @@ Table of Contents
 
 [comment]: <> (RULES-START)
 
+### constructor-super
+
+Rule disabled
+
+[🔙 Back to the README](README.md) | [🔝 Top](#readme)
+
+---
+
+### getter-return
+
+Rule disabled
+
+[🔙 Back to the README](README.md) | [🔝 Top](#readme)
+
+---
+
+### no-array-constructor
+
+Rule disabled
+
+[🔙 Back to the README](README.md) | [🔝 Top](#readme)
+
+---
+
+### no-const-assign
+
+Rule disabled
+
+[🔙 Back to the README](README.md) | [🔝 Top](#readme)
+
+---
+
+### no-dupe-args
+
+Rule disabled
+
+[🔙 Back to the README](README.md) | [🔝 Top](#readme)
+
+---
+
+### no-dupe-class-members
+
+Rule disabled
+
+[🔙 Back to the README](README.md) | [🔝 Top](#readme)
+
+---
+
+### no-dupe-keys
+
+Rule disabled
+
+[🔙 Back to the README](README.md) | [🔝 Top](#readme)
+
+---
+
+### no-empty-function
+
+Rule disabled
+
+[🔙 Back to the README](README.md) | [🔝 Top](#readme)
+
+---
+
+### no-extra-semi
+
+Rule disabled
+
+[🔙 Back to the README](README.md) | [🔝 Top](#readme)
+
+---
+
+### no-func-assign
+
+Rule disabled
+
+[🔙 Back to the README](README.md) | [🔝 Top](#readme)
+
+---
+
+### no-implied-eval
+
+Rule disabled
+
+[🔙 Back to the README](README.md) | [🔝 Top](#readme)
+
+---
+
+### no-import-assign
+
+Rule disabled
+
+[🔙 Back to the README](README.md) | [🔝 Top](#readme)
+
+---
+
+### no-new-symbol
+
+Rule disabled
+
+[🔙 Back to the README](README.md) | [🔝 Top](#readme)
+
+---
+
+### no-obj-calls
+
+Rule disabled
+
+[🔙 Back to the README](README.md) | [🔝 Top](#readme)
+
+---
+
+### no-redeclare
+
+Rule disabled
+
+[🔙 Back to the README](README.md) | [🔝 Top](#readme)
+
+---
+
+### no-setter-return
+
+Rule disabled
+
+[🔙 Back to the README](README.md) | [🔝 Top](#readme)
+
+---
+
+### no-this-before-super
+
+Rule disabled
+
+[🔙 Back to the README](README.md) | [🔝 Top](#readme)
+
+---
+
+### no-undef
+
+Rule disabled
+
+[🔙 Back to the README](README.md) | [🔝 Top](#readme)
+
+---
+
+### no-unreachable
+
+Rule disabled
+
+[🔙 Back to the README](README.md) | [🔝 Top](#readme)
+
+---
+
+### no-unsafe-negation
+
+Rule disabled
+
+[🔙 Back to the README](README.md) | [🔝 Top](#readme)
+
+---
+
 ### no-unused-vars
 
 Rule disabled
@@ -33,9 +250,89 @@ Rule disabled
 
 ---
 
+### no-var
+
+_Value_: `"error"`
+
+[🔙 Back to the README](README.md) | [🔝 Top](#readme)
+
+---
+
 ### no-use-before-define
 
 Rule disabled
+
+[🔙 Back to the README](README.md) | [🔝 Top](#readme)
+
+---
+
+### prefer-const
+
+_Value_: `"error"`
+
+[🔙 Back to the README](README.md) | [🔝 Top](#readme)
+
+---
+
+### prefer-rest-params
+
+_Value_: `"error"`
+
+[🔙 Back to the README](README.md) | [🔝 Top](#readme)
+
+---
+
+### prefer-spread
+
+_Value_: `"error"`
+
+[🔙 Back to the README](README.md) | [🔝 Top](#readme)
+
+---
+
+### require-await
+
+Rule disabled
+
+[🔙 Back to the README](README.md) | [🔝 Top](#readme)
+
+---
+
+### valid-typeof
+
+Rule disabled
+
+[🔙 Back to the README](README.md) | [🔝 Top](#readme)
+
+---
+
+### @typescript-eslint/adjacent-overload-signatures
+
+_Value_: `"error"`
+
+[🔙 Back to the README](README.md) | [🔝 Top](#readme)
+
+---
+
+### @typescript-eslint/await-thenable
+
+_Value_: `"error"`
+
+[🔙 Back to the README](README.md) | [🔝 Top](#readme)
+
+---
+
+### @typescript-eslint/ban-ts-comment
+
+_Value_: `"error"`
+
+[🔙 Back to the README](README.md) | [🔝 Top](#readme)
+
+---
+
+### @typescript-eslint/ban-types
+
+_Value_: `"error"`
 
 [🔙 Back to the README](README.md) | [🔝 Top](#readme)
 
@@ -318,6 +615,22 @@ enum MySeasons {
 
 ---
 
+### @typescript-eslint/no-array-constructor
+
+_Value_: `"error"`
+
+[🔙 Back to the README](README.md) | [🔝 Top](#readme)
+
+---
+
+### @typescript-eslint/no-empty-function
+
+_Value_: `"error"`
+
+[🔙 Back to the README](README.md) | [🔝 Top](#readme)
+
+---
+
 ### @typescript-eslint/no-empty-interface
 
 Rule disabled
@@ -334,9 +647,169 @@ Rule disabled
 
 ---
 
+### @typescript-eslint/no-extra-non-null-assertion
+
+_Value_: `"error"`
+
+[🔙 Back to the README](README.md) | [🔝 Top](#readme)
+
+---
+
+### @typescript-eslint/no-extra-semi
+
+_Value_: `"error"`
+
+[🔙 Back to the README](README.md) | [🔝 Top](#readme)
+
+---
+
+### @typescript-eslint/no-floating-promises
+
+_Value_: `"error"`
+
+[🔙 Back to the README](README.md) | [🔝 Top](#readme)
+
+---
+
+### @typescript-eslint/no-for-in-array
+
+_Value_: `"error"`
+
+[🔙 Back to the README](README.md) | [🔝 Top](#readme)
+
+---
+
+### @typescript-eslint/no-implied-eval
+
+_Value_: `"error"`
+
+[🔙 Back to the README](README.md) | [🔝 Top](#readme)
+
+---
+
+### @typescript-eslint/no-inferrable-types
+
+_Value_: `"error"`
+
+[🔙 Back to the README](README.md) | [🔝 Top](#readme)
+
+---
+
+### @typescript-eslint/no-misused-new
+
+_Value_: `"error"`
+
+[🔙 Back to the README](README.md) | [🔝 Top](#readme)
+
+---
+
+### @typescript-eslint/no-misused-promises
+
+_Value_: `"error"`
+
+[🔙 Back to the README](README.md) | [🔝 Top](#readme)
+
+---
+
+### @typescript-eslint/no-namespace
+
+_Value_: `"error"`
+
+[🔙 Back to the README](README.md) | [🔝 Top](#readme)
+
+---
+
+### @typescript-eslint/no-non-null-asserted-optional-chain
+
+_Value_: `"error"`
+
+[🔙 Back to the README](README.md) | [🔝 Top](#readme)
+
+---
+
+### @typescript-eslint/no-non-null-assertion
+
+_Value_: `"error"`
+
+[🔙 Back to the README](README.md) | [🔝 Top](#readme)
+
+---
+
+### @typescript-eslint/no-this-alias
+
+_Value_: `"error"`
+
+[🔙 Back to the README](README.md) | [🔝 Top](#readme)
+
+---
+
 ### @typescript-eslint/no-var-requires
 
 Rule disabled
+
+[🔙 Back to the README](README.md) | [🔝 Top](#readme)
+
+---
+
+### @typescript-eslint/prefer-as-const
+
+_Value_: `"error"`
+
+[🔙 Back to the README](README.md) | [🔝 Top](#readme)
+
+---
+
+### @typescript-eslint/prefer-namespace-keyword
+
+_Value_: `"error"`
+
+[🔙 Back to the README](README.md) | [🔝 Top](#readme)
+
+---
+
+### @typescript-eslint/triple-slash-reference
+
+_Value_: `"error"`
+
+[🔙 Back to the README](README.md) | [🔝 Top](#readme)
+
+---
+
+### @typescript-eslint/no-unsafe-assignment
+
+_Value_: `"error"`
+
+[🔙 Back to the README](README.md) | [🔝 Top](#readme)
+
+---
+
+### @typescript-eslint/no-unsafe-call
+
+_Value_: `"error"`
+
+[🔙 Back to the README](README.md) | [🔝 Top](#readme)
+
+---
+
+### @typescript-eslint/no-unsafe-member-access
+
+_Value_: `"error"`
+
+[🔙 Back to the README](README.md) | [🔝 Top](#readme)
+
+---
+
+### @typescript-eslint/no-unsafe-return
+
+_Value_: `"error"`
+
+[🔙 Back to the README](README.md) | [🔝 Top](#readme)
+
+---
+
+### @typescript-eslint/no-unnecessary-type-assertion
+
+_Value_: `"error"`
 
 [🔙 Back to the README](README.md) | [🔝 Top](#readme)
 
@@ -362,6 +835,46 @@ _Value_:
 ---
 
 ### @typescript-eslint/no-use-before-define
+
+_Value_: `"error"`
+
+[🔙 Back to the README](README.md) | [🔝 Top](#readme)
+
+---
+
+### @typescript-eslint/prefer-regexp-exec
+
+_Value_: `"error"`
+
+[🔙 Back to the README](README.md) | [🔝 Top](#readme)
+
+---
+
+### @typescript-eslint/require-await
+
+_Value_: `"error"`
+
+[🔙 Back to the README](README.md) | [🔝 Top](#readme)
+
+---
+
+### @typescript-eslint/restrict-plus-operands
+
+_Value_: `"error"`
+
+[🔙 Back to the README](README.md) | [🔝 Top](#readme)
+
+---
+
+### @typescript-eslint/restrict-template-expressions
+
+_Value_: `"error"`
+
+[🔙 Back to the README](README.md) | [🔝 Top](#readme)
+
+---
+
+### @typescript-eslint/unbound-method
 
 _Value_: `"error"`
 
