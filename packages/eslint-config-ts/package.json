@@ -9,9 +9,9 @@
 	"scripts": {
 		"auto-doc-rules": "node ../../utils/autoDocRules.js && prettier ./RULES.md --write",
 		"test": "jest",
-    "test:autofix": "eslint \"./tests/fixtures/*.valid.ts\" --config .eslintrc.dev.js --fix && jest",
-    "check-valid": "eslint \"./tests/fixtures/*.valid.ts\" --config .eslintrc.dev.js",
-    "check-invalid": "eslint \"./tests/fixtures/*.invalid.ts\" --config .eslintrc.dev.js"
+		"test:autofix": "eslint \"./tests/fixtures/*.valid.ts\" --config .eslintrc.dev.js --fix && jest",
+		"check-valid": "eslint \"./tests/fixtures/*.valid.ts\" --config .eslintrc.dev.js",
+		"check-invalid": "eslint \"./tests/fixtures/*.invalid.ts\" --config .eslintrc.dev.js"
 	},
 	"license": "BSD-3-Clause",
 	"author": {
@@ -30,8 +30,8 @@
 		"access": "public"
 	},
 	"dependencies": {
-    "@typescript-eslint/eslint-plugin": "^4.14.2",
-    "@typescript-eslint/parser": "^4.14.2",
+		"@typescript-eslint/eslint-plugin": "^4.14.2",
+		"@typescript-eslint/parser": "^4.14.2",
 		"@wezom/eslint-config": "file:../eslint-config"
 	}
 }

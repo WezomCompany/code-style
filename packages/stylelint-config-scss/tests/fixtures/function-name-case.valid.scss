@@ -1,11 +1,11 @@
 $size: 15px !default;
 
 div {
-	// CSS functions ALWAYS
+	/* CSS functions ALWAYS */
 	width: MIN(50rem, 10vw);
 	height: MAX(150rem, 10vh);
-	// Since these refer to a Sass variable without interpolation, they call
-	// Sass's built-in max() function.
+	/* Since these refer to a Sass variable without interpolation, they call */
+	/* Sass's built-in max() function. */
 	padding: min($size, 10px);
 	margin: max($size, 20px);
 }

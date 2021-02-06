@@ -18,7 +18,9 @@ describe('Rules', () => {
 				});
 
 				test('did not error', () => {
-					return result.then((data) => expect(data.errored).toBeFalsy());
+					return result.then((data) => {
+						expect(data.errored).toBeFalsy();
+					});
 				});
 
 				test('flags no warnings', () => {
