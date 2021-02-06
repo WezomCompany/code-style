@@ -26,7 +26,7 @@ _.stylelintrc.json_
 }
 ```
 
-**Add npm scripts**
+**Add npm scripts**  
 _package.json_
 
 ```json

@@ -27,7 +27,7 @@ _.eslintrc.json (parser babel-eslint is optional, you can use whatever you want)
 }
 ```
 
-**Add npm scripts**
+**Add npm scripts**  
 _package.json_
 
 ```json
