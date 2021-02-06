@@ -1,5 +1,5 @@
 {
-	"extends": ["@wezom/eslint-config-ts"],
+	"extends": ["@wezom/eslint-config-react", "@wezom/eslint-config-ts"],
 	"rules": {
 		"react/prop-types": "off"
 	}

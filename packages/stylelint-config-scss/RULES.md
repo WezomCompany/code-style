@@ -1,5 +1,7 @@
 # @wezom/stylelint-config-scss rules
 
+> These rules are in addition to the rules of the [@wezom/stylelint-config](https://github.com/WezomCompany/code-style/blob/main/packages/stylelint-config/RULES.md#readme)
+
 Table of Contents
 
 [comment]: <> (TOC-START)

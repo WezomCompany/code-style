@@ -23,6 +23,7 @@
 		"code-style",
 		"eslint",
 		"eslintconfig",
+		"react",
 		"ts",
 		"typescript"
 	],
@@ -30,10 +31,7 @@
 		"access": "public"
 	},
 	"dependencies": {
+		"@wezom/eslint-config-react": "file:../eslint-config-react",
 		"@wezom/eslint-config-ts": "file:../eslint-config-ts"
-	},
-	"devDependencies": {
-		"@types/react": "^17.0.1",
-		"react": "^17.0.1"
 	}
 }

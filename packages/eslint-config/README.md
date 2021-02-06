@@ -1,6 +1,6 @@
 # @wezom/eslint-config
 
-_ESLint shareable config_
+_ESLint shareable config._
 
 ## Rules
 

@@ -1,8 +1,8 @@
 # @wezom/stylelint-config-scss
 
-_Stylelint shareable config for Sass SCSS syntax_
+_Stylelint shareable config for Sass SCSS syntax._
 
-Config based on [@wezom/stylelint-config-scss](https://github.com/WezomCompany/code-style/tree/main/packages/stylelint-config#readme) and extended by some rules
+Config based on the [@wezom/stylelint-config-scss](https://github.com/WezomCompany/code-style/tree/main/packages/stylelint-config#readme) and extended by some rules
 
 ## Rules
 

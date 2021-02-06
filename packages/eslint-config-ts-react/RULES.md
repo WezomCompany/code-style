@@ -1,6 +1,6 @@
 # @wezom/eslint-config-ts-react rules
 
-> These rules are in addition to the rules of the [@wezom/eslint-config-ts](https://github.com/WezomCompany/code-style/blob/main/packages/eslint-config-ts/RULES.md#readme)
+> These rules are in addition to the rules of the [@wezom/eslint-config-react](https://github.com/WezomCompany/code-style/blob/main/packages/eslint-config-react/RULES.md#readme) and the [@wezom/eslint-config-ts](https://github.com/WezomCompany/code-style/blob/main/packages/eslint-config-ts/RULES.md#readme)
 
 Table of Contents
 

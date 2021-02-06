@@ -22,7 +22,8 @@
 		"@wezom",
 		"code-style",
 		"eslint",
-		"eslintconfig"
+		"eslintconfig",
+		"react"
 	],
 	"publishConfig": {
 		"access": "public"
@@ -32,11 +33,5 @@
 		"eslint-plugin-jsx-a11y": "^6.4.1",
 		"eslint-plugin-react": "^7.22.0",
 		"eslint-plugin-react-hooks": "^4.2.0"
-	},
-	"devDependencies": {
-		"react": "^17.0.1"
-	},
-	"peerDependencies": {
-		"eslint": "^7.19.0"
 	}
 }
