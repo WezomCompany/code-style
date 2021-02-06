@@ -29,7 +29,9 @@
   },
   "dependencies": {
     "@wezom/eslint-config": "file:packages\\eslint-config",
+    "@wezom/eslint-config-react": "file:packages\\eslint-config-react",
     "@wezom/eslint-config-ts": "file:packages\\eslint-config-ts",
+    "@wezom/eslint-config-ts-react": "file:packages\\eslint-config-ts-react",
     "@wezom/stylelint-config": "file:packages\\stylelint-config",
     "@wezom/stylelint-config-scss": "file:packages\\stylelint-config-scss"
   }

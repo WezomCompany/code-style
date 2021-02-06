@@ -2,5 +2,8 @@ lerna.json
 package.json
 package-lock.json
 packages/eslint-config/tests/fixtures/*.invalid.js
+packages/eslint-config-react/tests/fixtures/*.invalid.js
+packages/eslint-config-ts/tests/fixtures/*.invalid.ts
+packages/eslint-config-ts-react/tests/fixtures/*.invalid.ts
 packages/stylelint-config/tests/fixtures/*.invalid.css
 packages/stylelint-config-scss/tests/fixtures/*.invalid.scss

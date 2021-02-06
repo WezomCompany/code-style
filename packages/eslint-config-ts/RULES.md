@@ -7,6 +7,7 @@ Table of Contents
 [comment]: <> (TOC-START)
 
 1. [no-unused-vars](#no-unused-vars)
+1. [no-use-before-define](#no-use-before-define)
 1. [@typescript-eslint/explicit-function-return-type](#@typescript-eslint/explicit-function-return-type)
 1. [@typescript-eslint/explicit-module-boundary-types](#@typescript-eslint/explicit-module-boundary-types)
 1. [@typescript-eslint/naming-convention](#@typescript-eslint/naming-convention)
@@ -14,6 +15,7 @@ Table of Contents
 1. [@typescript-eslint/no-explicit-any](#@typescript-eslint/no-explicit-any)
 1. [@typescript-eslint/no-var-requires](#@typescript-eslint/no-var-requires)
 1. [@typescript-eslint/no-unused-vars](#@typescript-eslint/no-unused-vars)
+1. [@typescript-eslint/no-use-before-define](#@typescript-eslint/no-use-before-define)
 
 [comment]: <> (TOC-END)
 
@@ -24,6 +26,14 @@ Table of Contents
 [comment]: <> (RULES-START)
 
 ### no-unused-vars
+
+Rule disabled
+
+[🔙 Back to the README](README.md) | [🔝 Top](#readme)
+
+---
+
+### no-use-before-define
 
 Rule disabled
 
@@ -186,6 +196,11 @@ _Value_:
 		"format": null
 	},
 	{
+		"selector": "function",
+		"format": ["camelCase", "PascalCase"],
+		"leadingUnderscore": "allow"
+	},
+	{
 		"selector": "parameter",
 		"format": ["camelCase"],
 		"leadingUnderscore": "allow"
@@ -341,6 +356,14 @@ _Value_:
 	}
 ]
 ```
+
+[🔙 Back to the README](README.md) | [🔝 Top](#readme)
+
+---
+
+### @typescript-eslint/no-use-before-define
+
+_Value_: `"error"`
 
 [comment]: <> (RULES-END)
 

@@ -5,13 +5,10 @@
 		"plugin:@typescript-eslint/recommended-requiring-type-checking"
 	],
 	"parser": "@typescript-eslint/parser",
-	"parserOptions": {
-		"sourceType": "module",
-		"project": "./tsconfig.json"
-	},
 	"plugins": ["@typescript-eslint"],
 	"rules": {
 		"no-unused-vars": "off",
+		"no-use-before-define": "off",
 
 		"@typescript-eslint/explicit-function-return-type": "error",
 		"@typescript-eslint/explicit-module-boundary-types": "error",
@@ -30,6 +27,11 @@
 				"selector": "variable",
 				"modifiers": ["destructured"],
 				"format": null
+			},
+			{
+				"selector": "function",
+				"format": ["camelCase", "PascalCase"],
+				"leadingUnderscore": "allow"
 			},
 			{
 				"selector": "parameter",
@@ -61,6 +63,7 @@
 				"args": "none",
 				"caughtErrors": "all"
 			}
-		]
+		],
+		"@typescript-eslint/no-use-before-define": "error"
 	}
 }

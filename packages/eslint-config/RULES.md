@@ -107,6 +107,7 @@ Table of Contents
 1. [import/export](#import/export)
 1. [import/first](#import/first)
 1. [import/namespace](#import/namespace)
+1. [import/no-amd](#import/no-amd)
 1. [import/no-absolute-path](#import/no-absolute-path)
 1. [import/no-duplicates](#import/no-duplicates)
 1. [import/no-named-default](#import/no-named-default)
@@ -1192,6 +1193,14 @@ _Value_: `"error"`
 ### import/namespace
 
 Rule disabled
+
+[🔙 Back to the README](README.md) | [🔝 Top](#readme)
+
+---
+
+### import/no-amd
+
+_Value_: `"error"`
 
 [🔙 Back to the README](README.md) | [🔝 Top](#readme)
 

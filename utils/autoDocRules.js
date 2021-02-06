@@ -11,6 +11,7 @@ const glob = require('glob');
 const getConfigPath = (folderPath) => {
 	switch (path.basename(folderPath)) {
 		case 'eslint-config':
+		case 'eslint-config-react':
 		case 'eslint-config-ts':
 		case 'eslint-config-ts-react':
 			return path.join(folderPath, '.eslintrc.json');
