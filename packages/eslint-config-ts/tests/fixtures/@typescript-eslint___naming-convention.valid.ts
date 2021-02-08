@@ -81,7 +81,7 @@ enum MyList {
 }
 
 enum MySeasons {
-	mySeason1 = 'xXx',
-	mySeason2 = 'yYy',
-	mySeason3 = 'zZz'
+	MySeason1 = 'xXx',
+	MySeason2 = 'yYy',
+	MySeason3 = 'zZz'
 }

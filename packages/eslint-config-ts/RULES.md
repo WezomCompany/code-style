@@ -514,7 +514,7 @@ _Value_:
 	},
 	{
 		"selector": "enumMember",
-		"format": ["camelCase", "UPPER_CASE"]
+		"format": ["PascalCase"]
 	}
 ]
 ```
@@ -522,6 +522,52 @@ _Value_:
 Enforcing naming conventions helps keep the codebase consistent, and reduces overhead when thinking about how to name a variable. Additionally, a well-designed style guide can help communicate intent, such as by enforcing all private properties begin with an `_`, and all global-level constants are written in `UPPER_CASE`.
 
 _Usage examples_:
+
+🚧 Avoid
+
+```ts
+// Variables
+
+const my_const = 7;
+const Obj = {};
+
+// Function parameter
+
+function foo(PARAMETER_NAME: boolean, _param_name: boolean): void {
+	console.log(PARAMETER_NAME);
+	console.log(_param_name);
+}
+
+// memberLike
+
+const obj2 = {
+	obj_prop: true,
+	obj_method(): void {
+		console.log(this.objProp);
+	}
+};
+
+// typeLike
+
+class fooBar {}
+
+interface myInterface {
+	myProp: boolean;
+	myMethod(): void;
+}
+
+type MY_TYPE = string;
+
+abstract class my_class {}
+
+// enumMember
+
+enum MySeasons {
+	mySeason1 = 'xXx',
+	mySeason2 = 'yYy',
+	mySeason3 = 'zZz'
+}
+```
 
 👍 OK
 
@@ -605,9 +651,9 @@ enum MyList {
 }
 
 enum MySeasons {
-	mySeason1 = 'xXx',
-	mySeason2 = 'yYy',
-	mySeason3 = 'zZz'
+	MySeason1 = 'xXx',
+	MySeason2 = 'yYy',
+	MySeason3 = 'zZz'
 }
 ```
 
