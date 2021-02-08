@@ -370,7 +370,7 @@ class Test {
 }
 ```
 
-👍 OK
+👍 Use
 
 ```ts
 // No return value should be expected (void)
@@ -440,7 +440,7 @@ export class Test {
 }
 ```
 
-👍 OK
+👍 Use
 
 ```ts
 // Function is not exported
@@ -569,7 +569,7 @@ enum MySeasons {
 }
 ```
 
-👍 OK
+👍 Use
 
 ```ts
 // Variables

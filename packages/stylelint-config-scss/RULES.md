@@ -62,7 +62,7 @@ _Value_:
 
 _Usage examples_:
 
-👍 OK
+👍 Use
 
 ```scss
 $size: 15px !default;
@@ -130,7 +130,7 @@ $value-2: FALSE;
 $value-3: NUll;
 ```
 
-👍 OK
+👍 Use
 
 ```scss
 $value-1: true;

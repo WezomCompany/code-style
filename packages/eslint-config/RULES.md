@@ -245,7 +245,7 @@ for (let i = 10; i >= 0; i++) {
 }
 ```
 
-👍 OK
+👍 Use
 
 ```js
 for (let i = 0; i < 10; i++) {
@@ -1283,7 +1283,7 @@ cb({ a: 1 });
 callback(0);
 ```
 
-👍 OK
+👍 Use
 
 ```js
 cb(undefined);

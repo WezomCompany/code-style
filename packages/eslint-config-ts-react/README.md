@@ -1,6 +1,6 @@
 # @wezom/eslint-config-ts-react
 
-_ESLint shareable config React + TypeScript based on the [@wezom/eslint-config-react](https://github.com/WezomCompany/code-style/blob/main/packages/eslint-config-react/README.md#readme) and the [@wezom/eslint-config-ts](https://github.com/WezomCompany/code-style/blob/main/packages/eslint-config-ts/README.md#readme)_
+_ESLint shareable config React + TypeScript based on the [@wezom/eslint-config-react](https://github.com/WezomCompany/code-style/blob/main/packages/eslint-config-react/README.md#readme) and the [@wezom/eslint-config-ts](https://github.com/WezomCompany/code-style/blob/main/packages/eslint-config-ts/README.md#readme)._
 
 ## Rules
 

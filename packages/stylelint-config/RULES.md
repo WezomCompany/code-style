@@ -101,7 +101,7 @@ _Usage examples_:
 /* comment*/
 ```
 
-👍 OK
+👍 Use
 
 ```css
 /* comment */
@@ -188,7 +188,7 @@ b {
 }
 ```
 
-👍 OK
+👍 Use
 
 ```css
 a {

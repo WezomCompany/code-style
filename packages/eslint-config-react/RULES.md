@@ -73,7 +73,7 @@ export default function () {
 }
 ```
 
-👍 OK
+👍 Use
 
 ```jsx
 import React from 'react';

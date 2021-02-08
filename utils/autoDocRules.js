@@ -90,7 +90,7 @@ const getFixtureRuleContent = (rule, fixturesPaths) => {
 				const code = getFileContent(filepath);
 				const lang = path.extname(filepath).slice(1);
 				return [
-					`\n${validCase ? '👍 OK' : '🚧 Avoid'}\n`,
+					`\n${validCase ? '👍 Use' : '🚧 Avoid'}\n`,
 					`\`\`\`${lang}\n${code}\`\`\``
 				].join('\n');
 			}
