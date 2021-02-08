@@ -1,6 +1,6 @@
 # @wezom/stylelint-config
 
-_Stylelint shareable config._
+_Stylelint shareable config_
 
 ## Rules
 

@@ -6,7 +6,7 @@ Table of Contents
 
 [comment]: <> (TOC-START)
 
-1. [react/prop-types](#react/prop-types)
+1. [react/prop-types](#reactprop-types)
 
 [comment]: <> (TOC-END)
 

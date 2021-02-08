@@ -71,7 +71,8 @@ const getFileContent = (filepath) => {
 const generateTOC = (configRules) => {
 	return Object.keys(configRules)
 		.map((rule) => {
-			return `1. [${rule}](#${rule})`;
+			const anchor = rule.replace(/[@/]/g, '');
+			return `1. [${rule}](#${anchor})`;
 		})
 		.join('\n');
 };

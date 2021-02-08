@@ -9,7 +9,7 @@ Table of Contents
 1. [at-rule-no-unknown](#at-rule-no-unknown)
 1. [function-name-case](#function-name-case)
 1. [max-nesting-depth](#max-nesting-depth)
-1. [scss/at-rule-no-unknown](#scss/at-rule-no-unknown)
+1. [scss/at-rule-no-unknown](#scssat-rule-no-unknown)
 1. [value-keyword-case](#value-keyword-case)
 
 [comment]: <> (TOC-END)
