@@ -1,4 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
+/* __AUTO-TEST-EXPECT-ERRORS-COUNT=4__ */
+export const blank = true;
 /* __AUTO-DOC-PRINT-AFTER__ */
 // Should indicate that no value is returned (void)
 function test() {

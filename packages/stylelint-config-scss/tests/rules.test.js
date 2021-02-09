@@ -3,6 +3,7 @@ const path = require('path');
 const stylelint = require('stylelint');
 const config = require('../.stylelintrc.json');
 const getFixtures = require('../../../utils/getFixtures');
+const getExpectedProblemsCount = require('../../../utils/getExpectedProblemsCount');
 
 describe('Rules', () => {
 	const { valid, invalid } = getFixtures('tests/fixtures/*.scss');
@@ -22,12 +23,6 @@ describe('Rules', () => {
 						expect(data.errored).toBeFalsy();
 					});
 				});
-
-				test('flags no warnings', () => {
-					return result.then((data) =>
-						expect(data.results[0].warnings).toHaveLength(0)
-					);
-				});
 			});
 		});
 	});
@@ -43,9 +38,21 @@ describe('Rules', () => {
 					result = stylelint.lint({ code, config });
 				});
 
-				test('did error', () => {
-					return result.then((data) => expect(data.errored).toBeTruthy());
-				});
+				const expectedErrorsCount = getExpectedProblemsCount(file, 'errors');
+				if (typeof expectedErrorsCount === 'number') {
+					test(`expect ${expectedErrorsCount} errors`, () => {
+						return result.then((data) => {
+							const errors = data.results[0].warnings.filter(
+								(block) => block.severity === 'error'
+							);
+							expect(errors.length).toEqual(expectedErrorsCount);
+						});
+					});
+				} else {
+					test('did error', () => {
+						return result.then((data) => expect(data.errored).toBeTruthy());
+					});
+				}
 			});
 		});
 	});

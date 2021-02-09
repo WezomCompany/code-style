@@ -1,6 +1,7 @@
 const path = require('path');
 const eslint = require('eslint');
 const getFixtures = require('../../../utils/getFixtures');
+const getExpectedProblemsCount = require('../../../utils/getExpectedProblemsCount');
 const printIfErrors = require('../../../utils/printIfErrors');
 
 describe('Rules', () => {
@@ -22,9 +23,19 @@ describe('Rules', () => {
 	describe('Invalid cases', () => {
 		invalid.forEach((file) => {
 			const fileName = path.basename(file);
-			test(fileName, () => {
-				const result = cli.executeOnFiles(file);
-				expect(result.errorCount).toBeGreaterThan(0);
+			describe(fileName, () => {
+				const expectedErrorsCount = getExpectedProblemsCount(file, 'errors');
+				if (typeof expectedErrorsCount === 'number') {
+					test(`expect ${expectedErrorsCount} errors`, () => {
+						const result = cli.executeOnFiles(file);
+						expect(result.errorCount).toEqual(expectedErrorsCount);
+					});
+				} else {
+					test('did error', () => {
+						const result = cli.executeOnFiles(file);
+						expect(result.errorCount).toBeGreaterThan(0);
+					});
+				}
 			});
 		});
 	});

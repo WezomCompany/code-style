@@ -22,7 +22,10 @@ _.eslintrc.json_
 
 ```json
 {
-	"extends": ["@wezom/eslint-config-ts", "prettier"]
+	"extends": ["@wezom/eslint-config-ts", "prettier"],
+	"parserOptions": {
+		"project": "./tsconfig.json"
+	}
 }
 ```
 

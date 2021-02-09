@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
+export const blank = true;
 /* __AUTO-DOC-PRINT-AFTER__ */
 // No return value should be expected (void)
 function test(): void {

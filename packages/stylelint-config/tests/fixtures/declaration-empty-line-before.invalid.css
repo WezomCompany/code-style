@@ -1,3 +1,5 @@
+/* __AUTO-TEST-EXPECT-ERRORS-COUNT=1__ */
+/* __AUTO-DOC-PRINT-AFTER__ */
 b {
 	--bottom: 15px;
 	bottom: var(--bottom);
