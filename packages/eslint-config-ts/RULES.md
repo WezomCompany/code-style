@@ -484,7 +484,7 @@ _Value_:
 	},
 	{
 		"selector": "variable",
-		"format": ["camelCase", "UPPER_CASE"],
+		"format": ["camelCase", "PascalCase", "UPPER_CASE"],
 		"leadingUnderscore": "allow"
 	},
 	{
@@ -499,8 +499,7 @@ _Value_:
 	},
 	{
 		"selector": "parameter",
-		"format": ["camelCase"],
-		"leadingUnderscore": "allow"
+		"format": null
 	},
 	{
 		"selector": "memberLike",
@@ -529,14 +528,6 @@ _Usage examples_:
 // Variables
 
 const my_const = 7;
-const Obj = {};
-
-// Function parameter
-
-function foo(PARAMETER_NAME: boolean, _param_name: boolean): void {
-	console.log(PARAMETER_NAME);
-	console.log(_param_name);
-}
 
 // memberLike
 
@@ -577,6 +568,7 @@ enum MySeasons {
 const myVar = 5;
 const _myTempVar = 6;
 const MY_CONST = 7;
+const Obj = {};
 
 // Variables destructured
 
@@ -585,9 +577,15 @@ const { no_camel_case_destructured_var, camelCased } = obj;
 
 // Function parameter
 
-function foo(parameterName: boolean, _allowedUnderscore: boolean): void {
+function foo(
+	parameterName: boolean,
+	ParameterName: boolean,
+	PARAMETER_NAME: boolean,
+	_parameterName: boolean,
+	_ParameterName: boolean,
+	_PARAMETER_NAME: boolean
+): void {
 	console.log(parameterName);
-	console.log(_allowedUnderscore);
 }
 
 // memberLike

@@ -1,16 +1,10 @@
 /* eslint-disable @typescript-eslint/no-unused-vars, no-undef */
+/* __AUTO-TEST-EXPECT-ERRORS-COUNT=10__ */
+export const blank = true;
 /* __AUTO-DOC-PRINT-AFTER__ */
 // Variables
 
 const my_const = 7;
-const Obj = {};
-
-// Function parameter
-
-function foo(PARAMETER_NAME: boolean, _param_name: boolean): void {
-	console.log(PARAMETER_NAME);
-	console.log(_param_name);
-}
 
 // memberLike
 

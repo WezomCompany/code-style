@@ -1,6 +1,9 @@
 {
 	"extends": ["@wezom/eslint-config"],
 	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"project": "tsconfig.json"
+	},
 	"plugins": ["@typescript-eslint"],
 	"rules": {
 		"constructor-super": "off",
@@ -46,7 +49,7 @@
 			},
 			{
 				"selector": "variable",
-				"format": ["camelCase", "UPPER_CASE"],
+				"format": ["camelCase", "PascalCase", "UPPER_CASE"],
 				"leadingUnderscore": "allow"
 			},
 			{
@@ -61,8 +64,7 @@
 			},
 			{
 				"selector": "parameter",
-				"format": ["camelCase"],
-				"leadingUnderscore": "allow"
+				"format": null
 			},
 			{
 				"selector": "memberLike",

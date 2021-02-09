@@ -1,10 +1,12 @@
 /* eslint-disable @typescript-eslint/no-unused-vars, no-undef */
+export const blank = true;
 /* __AUTO-DOC-PRINT-AFTER__ */
 // Variables
 
 const myVar = 5;
 const _myTempVar = 6;
 const MY_CONST = 7;
+const Obj = {};
 
 // Variables destructured
 
@@ -13,9 +15,15 @@ const { no_camel_case_destructured_var, camelCased } = obj;
 
 // Function parameter
 
-function foo(parameterName: boolean, _allowedUnderscore: boolean): void {
+function foo(
+	parameterName: boolean,
+	ParameterName: boolean,
+	PARAMETER_NAME: boolean,
+	_parameterName: boolean,
+	_ParameterName: boolean,
+	_PARAMETER_NAME: boolean
+): void {
 	console.log(parameterName);
-	console.log(_allowedUnderscore);
 }
 
 // memberLike
@@ -38,23 +46,23 @@ class FooBar {
 		this.memberProp2 = argValue2;
 	}
 
-	get memberProp (): string {
-		return `${this.memberProp1} ${this.memberProp2}`
+	get memberProp(): string {
+		return `${this.memberProp1} ${this.memberProp2}`;
 	}
 
-	set memberProp (value: string) {
+	set memberProp(value: string) {
 		console.log(value);
 	}
 
-	printMemberProp (): void {
+	printMemberProp(): void {
 		console.log(this.memberProp);
 	}
 
-	private _printPrivateMember (): void {
+	private _printPrivateMember(): void {
 		console.log(this._memberProp3);
 	}
 
-	static instanceTypeGuard (instance: any): instance is FooBar {
+	static instanceTypeGuard(instance: any): instance is FooBar {
 		return instance instanceof FooBar;
 	}
 }
@@ -63,14 +71,12 @@ class FooBar {
 
 interface MyInterface {
 	myProp: boolean;
-	myMethod (): void;
+	myMethod(): void;
 }
 
 type MyType = string;
 
-abstract class MyClass {
-
-}
+abstract class MyClass {}
 
 // enumMember
 
