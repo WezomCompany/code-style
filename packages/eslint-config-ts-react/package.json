@@ -1,6 +1,6 @@
 {
 	"name": "@wezom/eslint-config-ts-react",
-	"version": "2.0.0-beta.0",
+	"version": "2.1.0-beta.0",
 	"description": "ESLint shareable config for React + TypeScript",
 	"main": ".eslintrc.json",
 	"files": [
