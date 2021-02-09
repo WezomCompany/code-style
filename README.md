@@ -1,5 +1,7 @@
 # code-style
 
+![All packages tests](https://github.com/WezomCompany/code-style/workflows/All%20packages%20tests/badge.svg)
+
 ## Packages:
 
 - [@wezom/eslint-config](https://github.com/WezomCompany/code-style/blob/main/packages/eslint-config/README.md#readme)
