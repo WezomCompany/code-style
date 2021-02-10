@@ -58,9 +58,6 @@ Table of Contents
 1. [@typescript-eslint/no-non-null-assertion](#typescript-eslintno-non-null-assertion)
 1. [@typescript-eslint/no-this-alias](#typescript-eslintno-this-alias)
 1. [@typescript-eslint/no-var-requires](#typescript-eslintno-var-requires)
-1. [@typescript-eslint/prefer-as-const](#typescript-eslintprefer-as-const)
-1. [@typescript-eslint/prefer-namespace-keyword](#typescript-eslintprefer-namespace-keyword)
-1. [@typescript-eslint/triple-slash-reference](#typescript-eslinttriple-slash-reference)
 1. [@typescript-eslint/no-unsafe-assignment](#typescript-eslintno-unsafe-assignment)
 1. [@typescript-eslint/no-unsafe-call](#typescript-eslintno-unsafe-call)
 1. [@typescript-eslint/no-unsafe-member-access](#typescript-eslintno-unsafe-member-access)
@@ -68,7 +65,10 @@ Table of Contents
 1. [@typescript-eslint/no-unnecessary-type-assertion](#typescript-eslintno-unnecessary-type-assertion)
 1. [@typescript-eslint/no-unused-vars](#typescript-eslintno-unused-vars)
 1. [@typescript-eslint/no-use-before-define](#typescript-eslintno-use-before-define)
+1. [@typescript-eslint/prefer-as-const](#typescript-eslintprefer-as-const)
+1. [@typescript-eslint/prefer-namespace-keyword](#typescript-eslintprefer-namespace-keyword)
 1. [@typescript-eslint/prefer-regexp-exec](#typescript-eslintprefer-regexp-exec)
+1. [@typescript-eslint/triple-slash-reference](#typescript-eslinttriple-slash-reference)
 1. [@typescript-eslint/require-await](#typescript-eslintrequire-await)
 1. [@typescript-eslint/restrict-plus-operands](#typescript-eslintrestrict-plus-operands)
 1. [@typescript-eslint/restrict-template-expressions](#typescript-eslintrestrict-template-expressions)
@@ -795,30 +795,6 @@ Rule disabled
 
 ---
 
-### @typescript-eslint/prefer-as-const
-
-_Value_: `"error"`
-
-[🔙 Back to the README](README.md) | [🔝 Top](#readme)
-
----
-
-### @typescript-eslint/prefer-namespace-keyword
-
-_Value_: `"error"`
-
-[🔙 Back to the README](README.md) | [🔝 Top](#readme)
-
----
-
-### @typescript-eslint/triple-slash-reference
-
-_Value_: `"error"`
-
-[🔙 Back to the README](README.md) | [🔝 Top](#readme)
-
----
-
 ### @typescript-eslint/no-unsafe-assignment
 
 _Value_: `"error"`
@@ -886,7 +862,31 @@ _Value_: `"error"`
 
 ---
 
+### @typescript-eslint/prefer-as-const
+
+_Value_: `"error"`
+
+[🔙 Back to the README](README.md) | [🔝 Top](#readme)
+
+---
+
+### @typescript-eslint/prefer-namespace-keyword
+
+_Value_: `"error"`
+
+[🔙 Back to the README](README.md) | [🔝 Top](#readme)
+
+---
+
 ### @typescript-eslint/prefer-regexp-exec
+
+_Value_: `"error"`
+
+[🔙 Back to the README](README.md) | [🔝 Top](#readme)
+
+---
+
+### @typescript-eslint/triple-slash-reference
 
 _Value_: `"error"`
 
@@ -904,7 +904,7 @@ _Value_: `"error"`
 
 ### @typescript-eslint/restrict-plus-operands
 
-_Value_: `"error"`
+Rule disabled
 
 [🔙 Back to the README](README.md) | [🔝 Top](#readme)
 
@@ -912,7 +912,7 @@ _Value_: `"error"`
 
 ### @typescript-eslint/restrict-template-expressions
 
-_Value_: `"error"`
+Rule disabled
 
 [🔙 Back to the README](README.md) | [🔝 Top](#readme)
 
