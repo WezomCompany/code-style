@@ -400,7 +400,16 @@ class Test {
 
 ### @typescript-eslint/explicit-module-boundary-types
 
-_Value_: `"error"`
+_Value_:
+
+```json
+[
+	"error",
+	{
+		"allowArgumentsExplicitlyTypedAsAny": true
+	}
+]
+```
 
 > Adding type annotations, especially return types, can save the compiler a lot of work. In part, this is because named types tend to be more compact than anonymous types (which the compiler might infer), which reduces the amount of time spent reading and writing declaration files (e.g. for incremental builds). Type inference is very convenient, so there's no need to do this universally - however, it can be a useful thing to try if you've identified a slow section of your code.
 >
@@ -456,8 +465,8 @@ export const fn = function (): number {
 // A return value of type string
 export const arrowFn1 = (arg: string): string => `test ${arg}`;
 
-// All arguments should be typed
-export const arrowFn2 = (arg: string): string => `test ${arg}`;
+// Allow arguments explicitly typed as any
+export const arrowFn2 = (arg: any): string => `test ${arg}`;
 
 // Class is not exported
 class Test {
@@ -465,6 +474,10 @@ class Test {
 		const x = 1 + 1;
 	}
 }
+
+// allowDirectConstAssertionInArrowFunctions
+export const bar = () => 1 as const;
+export const func = (value: number) => ({ type: 'X', value } as const);
 ```
 
 [🔙 Back to the README](README.md) | [🔝 Top](#readme)
