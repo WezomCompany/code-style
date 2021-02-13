@@ -14,7 +14,10 @@ See [full list of extends with code examples](https://github.com/WezomCompany/co
 **Install**
 
 ```bash
-npm i -D eslint @wezom/eslint-config-ts eslint-config-prettier
+# base packages
+npm i -D eslint babel-eslint eslint-config-prettier
+# wezom configs
+npm i -D @wezom/eslint-config @wezom/eslint-config-ts
 ```
 
 **Setup linter**  
@@ -22,10 +25,18 @@ _.eslintrc.json_
 
 ```json
 {
-	"extends": ["@wezom/eslint-config-ts", "prettier"],
-	"parserOptions": {
-		"project": "./tsconfig.json"
-	}
+	"root": true,
+	"extends": ["@wezom/eslint-config", "eslint-config-prettier"],
+	"parser": "babel-eslint",
+	"overrides": [
+		{
+			"files": ["*.ts"],
+			"extends": ["@wezom/eslint-config-ts", "eslint-config-prettier"],
+			"parserOptions": {
+				"project": "./tsconfig.json"
+			}
+		}
+	]
 }
 ```
 
@@ -36,7 +47,7 @@ _package.json_
 {
 	"scripts": {
 		"test": "npm run prettier && npm run eslint",
-		"eslint": "eslint src/**/*.ts",
+		"eslint": "eslint src/**/*.{js,ts}",
 		"eslint:autofix": "npm run eslint -- --fix",
 		"prettier": "prettier src/ --check",
 		"prettier:autofix": "npm run prettier -- --write"

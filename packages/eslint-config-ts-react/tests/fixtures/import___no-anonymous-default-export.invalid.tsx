@@ -1,7 +1,7 @@
 /* __AUTO-TEST-EXPECT-ERRORS-COUNT=1__ */
 /* __AUTO-DOC-PRINT-AFTER__ */
-import React, { ReactNode } from 'react';
+import React from 'react';
 
-export default function (): ReactNode {
+export default function () {
 	return <div>Hello</div>;
 }
