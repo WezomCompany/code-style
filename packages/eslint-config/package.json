@@ -27,6 +27,14 @@
 	"publishConfig": {
 		"access": "public"
 	},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WezomCompany/code-style.git"
+  },
+  "bugs": {
+    "url": "https://github.com/WezomCompany/code-style/issues"
+  },
+  "homepage": "https://github.com/WezomCompany/code-style/tree/main/packages/eslint-config#readme",
 	"dependencies": {
 		"eslint-plugin-import": "^2.22.1",
 		"eslint-plugin-node": "^11.1.0",

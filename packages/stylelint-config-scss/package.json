@@ -25,6 +25,14 @@
 		"stylelintconfig",
 		"scss"
 	],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WezomCompany/code-style.git"
+  },
+  "bugs": {
+    "url": "https://github.com/WezomCompany/code-style/issues"
+  },
+  "homepage": "https://github.com/WezomCompany/code-style/tree/main/packages/stylelint-config-scss#readme",
 	"publishConfig": {
 		"access": "public"
 	},
