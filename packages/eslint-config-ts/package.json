@@ -1,31 +1,31 @@
 {
-	"name": "@wezom/eslint-config-ts",
-	"version": "2.1.1-beta.0",
-	"description": "ESLint shareable config for TypeScript",
-	"main": ".eslintrc.json",
-	"files": [
-		".eslintrc.json"
-	],
-	"scripts": {
-		"auto-doc-rules": "node ../../utils/autoDocRules.js && prettier ./RULES.md --write",
-		"test": "jest",
-		"test:autofix": "eslint \"./tests/fixtures/*.valid.ts\" --config .eslintrc.dev.js --fix && jest",
-		"check-valid": "eslint \"./tests/fixtures/*.valid.ts\" --config .eslintrc.dev.js",
-		"check-invalid": "eslint \"./tests/fixtures/*.invalid.ts\" --config .eslintrc.dev.js"
-	},
-	"license": "BSD-3-Clause",
-	"author": {
-		"name": "Oleg Dutchenko",
-		"email": "dutchenko.o.dev@gmail.com"
-	},
-	"keywords": [
-		"@wezom",
-		"code-style",
-		"eslint",
-		"eslintconfig",
-		"ts",
-		"typescript"
-	],
+  "name": "@wezom/eslint-config-ts",
+  "version": "2.1.1-beta.0",
+  "description": "ESLint shareable config for TypeScript",
+  "main": ".eslintrc.json",
+  "files": [
+    ".eslintrc.json"
+  ],
+  "scripts": {
+    "auto-doc-rules": "node ../../utils/autoDocRules.js && prettier ./RULES.md --write",
+    "test": "jest",
+    "test:autofix": "eslint \"./tests/fixtures/*.valid.ts\" --config .eslintrc.dev.js --fix && jest",
+    "check-valid": "eslint \"./tests/fixtures/*.valid.ts\" --config .eslintrc.dev.js",
+    "check-invalid": "eslint \"./tests/fixtures/*.invalid.ts\" --config .eslintrc.dev.js"
+  },
+  "license": "BSD-3-Clause",
+  "author": {
+    "name": "Oleg Dutchenko",
+    "email": "dutchenko.o.dev@gmail.com"
+  },
+  "keywords": [
+    "@wezom",
+    "code-style",
+    "eslint",
+    "eslintconfig",
+    "ts",
+    "typescript"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/WezomCompany/code-style.git"
@@ -34,12 +34,12 @@
     "url": "https://github.com/WezomCompany/code-style/issues"
   },
   "homepage": "https://github.com/WezomCompany/code-style/tree/main/packages/eslint-config-ts#readme",
-	"publishConfig": {
-		"access": "public"
-	},
-	"dependencies": {
-		"@typescript-eslint/eslint-plugin": "^4.14.2",
-		"@typescript-eslint/parser": "^4.14.2",
-		"@wezom/eslint-config": "file:../eslint-config"
-	}
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.14.2",
+    "@typescript-eslint/parser": "^4.14.2",
+    "@wezom/eslint-config": "file:../eslint-config"
+  }
 }

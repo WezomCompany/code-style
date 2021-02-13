@@ -1,29 +1,29 @@
 {
-	"name": "@wezom/stylelint-config",
-	"version": "2.1.0-beta.0",
-	"description": "Stylelint shareable config",
-	"main": ".stylelintrc.json",
-	"files": [
-		".stylelintrc.json"
-	],
-	"scripts": {
-		"auto-doc-rules": "node ../../utils/autoDocRules.js && prettier ./RULES.md --write",
-		"test": "jest",
-		"test:autofix": "stylelint \"./tests/fixtures/*.valid.css\" --fix && jest",
-		"check-valid": "stylelint \"./tests/fixtures/*.valid.css\"",
-		"check-invalid": "stylelint \"./tests/fixtures/comment-whitespace-inside.invalid.css\""
-	},
-	"license": "BSD-3-Clause",
-	"author": {
-		"name": "Oleg Dutchenko",
-		"email": "dutchenko.o.dev@gmail.com"
-	},
-	"keywords": [
-		"@wezom",
-		"code-style",
-		"stylelint",
-		"stylelintconfig"
-	],
+  "name": "@wezom/stylelint-config",
+  "version": "2.1.0-beta.0",
+  "description": "Stylelint shareable config",
+  "main": ".stylelintrc.json",
+  "files": [
+    ".stylelintrc.json"
+  ],
+  "scripts": {
+    "auto-doc-rules": "node ../../utils/autoDocRules.js && prettier ./RULES.md --write",
+    "test": "jest",
+    "test:autofix": "stylelint \"./tests/fixtures/*.valid.css\" --fix && jest",
+    "check-valid": "stylelint \"./tests/fixtures/*.valid.css\"",
+    "check-invalid": "stylelint \"./tests/fixtures/comment-whitespace-inside.invalid.css\""
+  },
+  "license": "BSD-3-Clause",
+  "author": {
+    "name": "Oleg Dutchenko",
+    "email": "dutchenko.o.dev@gmail.com"
+  },
+  "keywords": [
+    "@wezom",
+    "code-style",
+    "stylelint",
+    "stylelintconfig"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/WezomCompany/code-style.git"
@@ -32,7 +32,7 @@
     "url": "https://github.com/WezomCompany/code-style/issues"
   },
   "homepage": "https://github.com/WezomCompany/code-style/tree/main/packages/stylelint-config#readme",
-	"publishConfig": {
-		"access": "public"
-	}
+  "publishConfig": {
+    "access": "public"
+  }
 }
