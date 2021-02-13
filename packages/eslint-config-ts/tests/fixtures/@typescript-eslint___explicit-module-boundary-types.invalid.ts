@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/explicit-function-return-type, @typescript-eslint/no-unused-vars */
-/* __AUTO-TEST-EXPECT-ERRORS-COUNT=6__ */
+/* __AUTO-TEST-EXPECT-ERRORS-COUNT=5__ */
 /* __AUTO-DOC-PRINT-AFTER__ */
 // Should indicate that no value is returned (void)
 export function test() {

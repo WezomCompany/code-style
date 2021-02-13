@@ -1,38 +1,46 @@
 {
-	"name": "@wezom/eslint-config",
-	"version": "2.1.0-beta.0",
-	"description": "ESLint shareable config",
-	"main": ".eslintrc.json",
-	"files": [
-		".eslintrc.json"
-	],
-	"scripts": {
-		"auto-doc-rules": "node ../../utils/autoDocRules.js && prettier ./RULES.md --write",
-		"test": "jest",
-		"test:autofix": "eslint \"./tests/fixtures/*.valid.js\" --config .eslintrc.dev.js --fix && jest",
-		"check-valid": "eslint \"./tests/fixtures/*.valid.js\" --config .eslintrc.dev.js",
-		"check-invalid": "eslint \"./tests/fixtures/*.invalid.js\" --config .eslintrc.dev.js"
-	},
-	"license": "BSD-3-Clause",
-	"author": {
-		"name": "Oleg Dutchenko",
-		"email": "dutchenko.o.dev@gmail.com"
-	},
-	"keywords": [
-		"@wezom",
-		"code-style",
-		"eslint",
-		"eslintconfig"
-	],
-	"publishConfig": {
-		"access": "public"
-	},
-	"dependencies": {
-		"eslint-plugin-import": "^2.22.1",
-		"eslint-plugin-node": "^11.1.0",
-		"eslint-plugin-promise": "^4.2.1"
-	},
-	"peerDependencies": {
-		"eslint": "^7.19.0"
-	}
+  "name": "@wezom/eslint-config",
+  "version": "2.1.0-beta.0",
+  "description": "ESLint shareable config",
+  "main": ".eslintrc.json",
+  "files": [
+    ".eslintrc.json"
+  ],
+  "scripts": {
+    "auto-doc-rules": "node ../../utils/autoDocRules.js && prettier ./RULES.md --write",
+    "test": "jest",
+    "test:autofix": "eslint \"./tests/fixtures/*.valid.js\" --config .eslintrc.dev.js --fix && jest",
+    "check-valid": "eslint \"./tests/fixtures/*.valid.js\" --config .eslintrc.dev.js",
+    "check-invalid": "eslint \"./tests/fixtures/*.invalid.js\" --config .eslintrc.dev.js"
+  },
+  "license": "BSD-3-Clause",
+  "author": {
+    "name": "Oleg Dutchenko",
+    "email": "dutchenko.o.dev@gmail.com"
+  },
+  "keywords": [
+    "@wezom",
+    "code-style",
+    "eslint",
+    "eslintconfig"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WezomCompany/code-style.git"
+  },
+  "bugs": {
+    "url": "https://github.com/WezomCompany/code-style/issues"
+  },
+  "homepage": "https://github.com/WezomCompany/code-style/tree/main/packages/eslint-config#readme",
+  "dependencies": {
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1"
+  },
+  "peerDependencies": {
+    "eslint": "^7.19.0"
+  }
 }

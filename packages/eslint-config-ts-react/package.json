@@ -1,37 +1,45 @@
 {
-	"name": "@wezom/eslint-config-ts-react",
-	"version": "2.1.0-beta.0",
-	"description": "ESLint shareable config for React + TypeScript",
-	"main": ".eslintrc.json",
-	"files": [
-		".eslintrc.json"
-	],
-	"scripts": {
-		"auto-doc-rules": "node ../../utils/autoDocRules.js && prettier ./RULES.md --write",
-		"test": "jest --passWithNoTests",
-		"test:autofix": "eslint \"./tests/fixtures/*.valid.ts?(x)\" --config .eslintrc.dev.js --fix && jest",
-		"check-valid": "eslint \"./tests/fixtures/*.valid.ts?(x)\" --config .eslintrc.dev.js",
-		"check-invalid": "eslint \"./tests/fixtures/*.invalid.tsx\" --config .eslintrc.dev.js"
-	},
-	"license": "BSD-3-Clause",
-	"author": {
-		"name": "Oleg Dutchenko",
-		"email": "dutchenko.o.dev@gmail.com"
-	},
-	"keywords": [
-		"@wezom",
-		"code-style",
-		"eslint",
-		"eslintconfig",
-		"react",
-		"ts",
-		"typescript"
-	],
-	"publishConfig": {
-		"access": "public"
-	},
-	"dependencies": {
-		"@wezom/eslint-config-react": "file:../eslint-config-react",
-		"@wezom/eslint-config-ts": "file:../eslint-config-ts"
-	}
+  "name": "@wezom/eslint-config-ts-react",
+  "version": "2.1.1-beta.0",
+  "description": "ESLint shareable config for React + TypeScript",
+  "main": ".eslintrc.json",
+  "files": [
+    ".eslintrc.json"
+  ],
+  "scripts": {
+    "auto-doc-rules": "node ../../utils/autoDocRules.js && prettier ./RULES.md --write",
+    "test": "jest --passWithNoTests",
+    "test:autofix": "eslint \"./tests/fixtures/*.valid.ts?(x)\" --config .eslintrc.dev.js --fix && jest",
+    "check-valid": "eslint \"./tests/fixtures/*.valid.ts?(x)\" --config .eslintrc.dev.js",
+    "check-invalid": "eslint \"./tests/fixtures/*.invalid.tsx\" --config .eslintrc.dev.js"
+  },
+  "license": "BSD-3-Clause",
+  "author": {
+    "name": "Oleg Dutchenko",
+    "email": "dutchenko.o.dev@gmail.com"
+  },
+  "keywords": [
+    "@wezom",
+    "code-style",
+    "eslint",
+    "eslintconfig",
+    "react",
+    "ts",
+    "typescript"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WezomCompany/code-style.git"
+  },
+  "bugs": {
+    "url": "https://github.com/WezomCompany/code-style/issues"
+  },
+  "homepage": "https://github.com/WezomCompany/code-style/tree/main/packages/eslint-config-ts-react#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@wezom/eslint-config-react": "file:../eslint-config-react",
+    "@wezom/eslint-config-ts": "file:../eslint-config-ts"
+  }
 }

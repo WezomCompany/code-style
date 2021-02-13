@@ -13,8 +13,8 @@ export const fn = function (): number {
 // A return value of type string
 export const arrowFn1 = (arg: string): string => `test ${arg}`;
 
-// All arguments should be typed
-export const arrowFn2 = (arg: string): string => `test ${arg}`;
+// Allow arguments explicitly typed as any
+export const arrowFn2 = (arg: any): string => `test ${arg}`;
 
 // Class is not exported
 class Test {
@@ -22,3 +22,7 @@ class Test {
 		const x = 1 + 1;
 	}
 }
+
+// allowDirectConstAssertionInArrowFunctions
+export const bar = () => 1 as const;
+export const func = (value: number) => ({ type: 'X', value } as const);
