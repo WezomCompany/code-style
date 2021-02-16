@@ -40,6 +40,7 @@ Table of Contents
 1. [jsx-a11y/role-supports-aria-props](#jsx-a11yrole-supports-aria-props)
 1. [jsx-a11y/scope](#jsx-a11yscope)
 1. [react-hooks/rules-of-hooks](#react-hooksrules-of-hooks)
+1. [react-hooks/exhaustive-deps](#react-hooksexhaustive-deps)
 
 [comment]: <> (TOC-END)
 
@@ -373,6 +374,14 @@ _Value_: `"error"`
 ---
 
 ### react-hooks/rules-of-hooks
+
+_Value_: `"error"`
+
+[🔙 Back to the README](README.md) | [🔝 Top](#readme)
+
+---
+
+### react-hooks/exhaustive-deps
 
 _Value_: `"error"`
 

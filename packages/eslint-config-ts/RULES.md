@@ -933,7 +933,7 @@ Rule disabled
 
 ### @typescript-eslint/unbound-method
 
-_Value_: `"error"`
+Rule disabled
 
 [comment]: <> (RULES-END)
 
