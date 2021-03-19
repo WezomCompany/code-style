@@ -1,19 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars, no-undef */
-/* __AUTO-TEST-EXPECT-ERRORS-COUNT=10__ */
+/* __AUTO-TEST-EXPECT-ERRORS-COUNT=11__ */
 export const blank = true;
 /* __AUTO-DOC-PRINT-AFTER__ */
-// Variables
-
-const my_const = 7;
-
-// memberLike
-
-const obj2 = {
-	obj_prop: true,
-	obj_method(): void {
-		console.log(this.objProp);
-	}
-};
 
 // typeLike
 
@@ -29,6 +17,13 @@ type MY_TYPE = string;
 
 abstract class my_class {
 
+}
+
+class FooBar {
+	private PrivateField = true;
+	private privateField = true;
+	private PRIVATE_FIELD = true;
+	private private_field = true;
 }
 
 // enumMember
