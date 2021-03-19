@@ -6,11 +6,15 @@ export const blank = true;
 const myVar = 5;
 const _myTempVar = 6;
 const MY_CONST = 7;
+const my_const = 7;
 const Obj = {};
 
 // Variables destructured
 
-const obj = {};
+const obj = {
+	no_camel_case_destructured_var: true,
+	camelCased: true
+};
 const { no_camel_case_destructured_var, camelCased } = obj;
 
 // Function parameter
@@ -30,6 +34,13 @@ function foo(
 
 const obj2 = {
 	objProp: true,
+	ObjProp: true,
+	obj_prop: true,
+	OBJECT_PROP: true,
+	_pseudoPrivateField: true,
+	_PseudoPrivateField: true,
+	_PSEUDO_PRIVATE_FIELD: true,
+	_pseudo_private_field: true,
 	objMethod(): void {
 		console.log(this.objProp);
 	}
@@ -39,7 +50,10 @@ class FooBar {
 	memberProp1: string;
 	memberProp2: string;
 
-	private _memberProp3 = 'xXx';
+	private _PrivateField = true;
+	private _privateField = true;
+	private _PRIVATE_FIELD = true;
+	private _private_field = true;
 
 	constructor(argValue1: string, argValue2: string) {
 		this.memberProp1 = argValue1;
@@ -59,7 +73,7 @@ class FooBar {
 	}
 
 	private _printPrivateMember(): void {
-		console.log(this._memberProp3);
+		console.log(this._private_field);
 	}
 
 	static instanceTypeGuard(instance: any): instance is FooBar {
