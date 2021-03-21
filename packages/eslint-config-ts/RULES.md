@@ -800,7 +800,7 @@ Rule disabled
 
 ### @typescript-eslint/no-unsafe-assignment
 
-_Value_: `"error"`
+Rule disabled
 
 [🔙 Back to the README](README.md) | [🔝 Top](#readme)
 
@@ -808,7 +808,7 @@ _Value_: `"error"`
 
 ### @typescript-eslint/no-unsafe-call
 
-_Value_: `"error"`
+Rule disabled
 
 [🔙 Back to the README](README.md) | [🔝 Top](#readme)
 
@@ -816,7 +816,7 @@ _Value_: `"error"`
 
 ### @typescript-eslint/no-unsafe-member-access
 
-_Value_: `"error"`
+Rule disabled
 
 [🔙 Back to the README](README.md) | [🔝 Top](#readme)
 
