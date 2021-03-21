@@ -1,6 +1,6 @@
 {
   "name": "@wezom/eslint-config-ts-react",
-  "version": "7.0.1",
+  "version": "8.0.0",
   "description": "ESLint shareable config for React + TypeScript",
   "main": ".eslintrc.json",
   "files": [
