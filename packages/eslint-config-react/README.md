@@ -34,9 +34,9 @@ _package.json_
 {
 	"scripts": {
 	    "test": "npm run prettier && npm run eslint",
-		"eslint": "eslint src/**/*.js",
+		"eslint": "eslint src/**/*.{js,jsx}",
 		"eslint:autofix": "npm run eslint -- --fix",
-        "prettier": "prettier src/ --check",
+		"prettier": "prettier src/ --check",
 		"prettier:autofix": "npm run prettier -- --write"
 	}
 }
