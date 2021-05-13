@@ -33,7 +33,7 @@ _package.json_
 ```json
 {
 	"scripts": {
-	    "test": "npm run prettier && npm run eslint",
+		"test": "npm run prettier && npm run eslint",
 		"eslint": "eslint src/**/*.{js,jsx}",
 		"eslint:autofix": "npm run eslint -- --fix",
 		"prettier": "prettier src/ --check",
