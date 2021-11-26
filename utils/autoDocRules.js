@@ -57,11 +57,7 @@ const getAllFixturesPaths = (folderPath) => {
  * @return {string}
  */
 const getFileContent = (filepath) => {
-	return fs
-		.readFileSync(filepath)
-		.toString()
-		.split('/* __AUTO-DOC-PRINT-AFTER__ */')
-		.pop();
+	return fs.readFileSync(filepath).toString().split('/* __AUTO-DOC-PRINT-AFTER__ */').pop();
 };
 
 /**
@@ -89,10 +85,7 @@ const getFixtureRuleContent = (rule, fixturesPaths) => {
 			if (fs.existsSync(filepath)) {
 				const code = getFileContent(filepath);
 				const lang = path.extname(filepath).slice(1);
-				return [
-					`\n${validCase ? '👍 Use' : '🚧 Avoid'}\n`,
-					`\`\`\`${lang}\n${code}\`\`\``
-				].join('\n');
+				return [`\n${validCase ? '👍 Use' : '🚧 Avoid'}\n`, `\`\`\`${lang}\n${code}\`\`\``].join('\n');
 			}
 		}
 		return undefined;
@@ -138,10 +131,7 @@ const generateRulesDescription = (configRules, fixturesPaths) => {
 				if (typeof value === 'string') {
 					val = `\`"${value}"\``;
 				} else if (typeof value === 'object') {
-					val =
-						'\n```json\n' +
-						JSON.stringify(value, undefined, '    ') +
-						'\n```';
+					val = '\n```json\n' + JSON.stringify(value, undefined, '    ') + '\n```';
 				} else {
 					val = `\`${value}\``;
 				}
