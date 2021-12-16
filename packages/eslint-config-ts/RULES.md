@@ -340,7 +340,18 @@ _Value_: `"error"`
 
 ### @typescript-eslint/explicit-function-return-type
 
-_Value_: `"error"`
+_Value_:
+
+```json
+[
+	"error",
+	{
+		"allowExpressions": true,
+		"allowHigherOrderFunctions": true,
+		"allowTypedFunctionExpressions": true
+	}
+]
+```
 
 Explicit types for function return values makes it clear to any calling code what type is returned. This ensures that the return value is assigned to a variable of the correct type; or in the case where there is no return value, that the calling code doesn't try to use the undefined value when it shouldn't.
 
@@ -392,6 +403,38 @@ class Test {
 		const x = 1 + 1;
 	}
 }
+
+// allowExpressions
+// ----------------
+
+document.addEventListener('click', () => undefined);
+
+document.addEventListener('click', function () {
+	return undefined;
+});
+
+const arr: number[] = [];
+const foo = arr.map((i) => i * i);
+
+// allowHigherOrderFunctions
+// -------------------------
+
+const arrowFn2 = () => (): void => undefined;
+
+function fn2() {
+	return function (): void {
+		return undefined;
+	};
+}
+
+// allowTypedFunctionExpressions
+// -----------------------------
+
+interface TypedFn {
+	(): void;
+}
+
+const typedFn: TypedFn = () => undefined;
 ```
 
 [🔙 Back to the README](README.md) | [🔝 Top](#readme)
