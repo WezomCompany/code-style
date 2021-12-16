@@ -1,6 +1,6 @@
 {
   "name": "@wezom/stylelint-config-scss",
-  "version": "8.0.0",
+  "version": "9.0.0",
   "description": "Stylelint shareable config for SCSS",
   "main": ".stylelintrc.json",
   "files": [
