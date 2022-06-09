@@ -1,9 +1,6 @@
 {
 	"extends": ["@wezom/eslint-config"],
 	"parser": "@typescript-eslint/parser",
-	"parserOptions": {
-		"project": "tsconfig.json"
-	},
 	"plugins": ["@typescript-eslint"],
 	"rules": {
 		"constructor-super": "off",
