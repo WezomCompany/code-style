@@ -36,9 +36,11 @@
   "publishConfig": {
     "access": "public"
   },
-  "dependencies": {
-    "@wezom/eslint-config": "file:../eslint-config",
+  "peerDependencies": {
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-react": "^7.28.0"
+  },
+  "dependencies": {
+    "@wezom/eslint-config": "file:../eslint-config"
   }
 }

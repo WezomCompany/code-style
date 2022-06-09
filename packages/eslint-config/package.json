@@ -35,12 +35,10 @@
     "url": "https://github.com/WezomCompany/code-style/issues"
   },
   "homepage": "https://github.com/WezomCompany/code-style/tree/main/packages/eslint-config#readme",
-  "dependencies": {
+  "peerDependencies": {
+    "eslint": "^7.23.0 || ^8.0.0",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1"
-  },
-  "peerDependencies": {
-    "eslint": "^7.23.0 || ^8.0.0"
   }
 }
