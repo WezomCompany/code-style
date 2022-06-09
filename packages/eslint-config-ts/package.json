@@ -1,6 +1,6 @@
 {
   "name": "@wezom/eslint-config-ts",
-  "version": "11.0.0",
+  "version": "11.0.1",
   "description": "ESLint shareable config for TypeScript",
   "main": ".eslintrc.json",
   "files": [
