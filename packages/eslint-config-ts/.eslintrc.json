@@ -27,6 +27,7 @@
 		"no-unreachable": "off",
 		"no-unsafe-negation": "off",
 		"no-unused-vars": "off",
+		"no-useless-constructor": "off",
 		"no-var": "error",
 		"no-use-before-define": "off",
 		"prefer-const": "error",
@@ -34,7 +35,6 @@
 		"prefer-spread": "error",
 		"require-await": "off",
 		"valid-typeof": "off",
-
 		"@typescript-eslint/adjacent-overload-signatures": "error",
 		"@typescript-eslint/await-thenable": "error",
 		"@typescript-eslint/ban-ts-comment": "error",
@@ -59,12 +59,6 @@
 				"selector": "function",
 				"format": ["camelCase", "PascalCase"],
 				"leadingUnderscore": "allow"
-			},
-			{
-				"selector": "memberLike",
-				"modifiers": ["private"],
-				"format": null,
-				"leadingUnderscore": "require"
 			},
 			{
 				"selector": "typeLike",
@@ -105,7 +99,17 @@
 				"caughtErrors": "all"
 			}
 		],
-		"@typescript-eslint/no-use-before-define": "error",
+		"@typescript-eslint/no-use-before-define": [
+			"error",
+			{
+				"functions": false,
+				"classes": true,
+				"variables": true,
+				"enums": true,
+				"typedefs": true,
+				"ignoreTypeReferences": true
+			}
+		],
 		"@typescript-eslint/prefer-as-const": "error",
 		"@typescript-eslint/prefer-namespace-keyword": "error",
 		"@typescript-eslint/prefer-regexp-exec": "error",
