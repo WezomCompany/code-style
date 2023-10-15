@@ -1,6 +1,6 @@
 # code-style
 
-![All packages tests](https://github.com/WezomCompany/code-style/workflows/All%20packages%20tests/badge.svg)
+![All Packages tests](https://github.com/WezomCompany/code-style/workflows/All%20Packages%20tests/badge.svg)
 
 ## Packages:
 
