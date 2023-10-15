@@ -1,4 +1,4 @@
-name: All packages tests
+name: All Packages tests
 
 on: [pull_request]
 
