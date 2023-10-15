@@ -8,6 +8,7 @@ Table of Contents
 
 1. [import/no-amd](#importno-amd)
 1. [import/no-anonymous-default-export](#importno-anonymous-default-export)
+1. [react/display-name](#reactdisplay-name)
 1. [react/forbid-foreign-prop-types](#reactforbid-foreign-prop-types)
 1. [react/jsx-no-comment-textnodes](#reactjsx-no-comment-textnodes)
 1. [react/jsx-no-duplicate-props](#reactjsx-no-duplicate-props)
@@ -39,8 +40,6 @@ Table of Contents
 1. [jsx-a11y/role-has-required-aria-props](#jsx-a11yrole-has-required-aria-props)
 1. [jsx-a11y/role-supports-aria-props](#jsx-a11yrole-supports-aria-props)
 1. [jsx-a11y/scope](#jsx-a11yscope)
-1. [react-hooks/rules-of-hooks](#react-hooksrules-of-hooks)
-1. [react-hooks/exhaustive-deps](#react-hooksexhaustive-deps)
 
 [comment]: <> (TOC-END)
 
@@ -83,6 +82,14 @@ export default function Hello() {
 	return <div>Hello</div>;
 }
 ```
+
+[🔙 Back to the README](README.md) | [🔝 Top](#readme)
+
+---
+
+### react/display-name
+
+Rule disabled
 
 [🔙 Back to the README](README.md) | [🔝 Top](#readme)
 
@@ -366,22 +373,6 @@ _Value_: `"error"`
 ---
 
 ### jsx-a11y/scope
-
-_Value_: `"error"`
-
-[🔙 Back to the README](README.md) | [🔝 Top](#readme)
-
----
-
-### react-hooks/rules-of-hooks
-
-_Value_: `"error"`
-
-[🔙 Back to the README](README.md) | [🔝 Top](#readme)
-
----
-
-### react-hooks/exhaustive-deps
 
 _Value_: `"error"`
 

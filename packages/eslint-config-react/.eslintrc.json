@@ -38,9 +38,6 @@
 		"react/require-render-return": "error",
 		"react/style-prop-object": "error",
 
-		"react-hooks/rules-of-hooks": "error",
-		"react-hooks/exhaustive-deps": "error",
-
 		"jsx-a11y/alt-text": "error",
 		"jsx-a11y/anchor-has-content": "error",
 		"jsx-a11y/anchor-is-valid": [

@@ -27,6 +27,7 @@ Table of Contents
 1. [no-unreachable](#no-unreachable)
 1. [no-unsafe-negation](#no-unsafe-negation)
 1. [no-unused-vars](#no-unused-vars)
+1. [no-useless-constructor](#no-useless-constructor)
 1. [no-var](#no-var)
 1. [no-use-before-define](#no-use-before-define)
 1. [prefer-const](#prefer-const)
@@ -243,6 +244,14 @@ Rule disabled
 ---
 
 ### no-unused-vars
+
+Rule disabled
+
+[🔙 Back to the README](README.md) | [🔝 Top](#readme)
+
+---
+
+### no-useless-constructor
 
 Rule disabled
 
@@ -538,12 +547,6 @@ _Value_:
 		"selector": "function",
 		"format": ["camelCase", "PascalCase"],
 		"leadingUnderscore": "allow"
-	},
-	{
-		"selector": "memberLike",
-		"modifiers": ["private"],
-		"format": null,
-		"leadingUnderscore": "require"
 	},
 	{
 		"selector": "typeLike",
@@ -902,7 +905,21 @@ _Value_:
 
 ### @typescript-eslint/no-use-before-define
 
-_Value_: `"error"`
+_Value_:
+
+```json
+[
+	"error",
+	{
+		"functions": false,
+		"classes": true,
+		"variables": true,
+		"enums": true,
+		"typedefs": true,
+		"ignoreTypeReferences": true
+	}
+]
+```
 
 [🔙 Back to the README](README.md) | [🔝 Top](#readme)
 

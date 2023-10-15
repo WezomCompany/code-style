@@ -937,8 +937,8 @@ _Value_:
 	"error",
 	{
 		"functions": false,
-		"classes": false,
-		"variables": false
+		"classes": true,
+		"variables": true
 	}
 ]
 ```

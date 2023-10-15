@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars, no-undef */
-/* __AUTO-TEST-EXPECT-ERRORS-COUNT=11__ */
+/* __AUTO-TEST-EXPECT-ERRORS-COUNT=7__ */
 export const blank = true;
 /* __AUTO-DOC-PRINT-AFTER__ */
 
