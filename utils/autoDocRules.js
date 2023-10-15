@@ -57,7 +57,11 @@ const getAllFixturesPaths = (folderPath) => {
  * @return {string}
  */
 const getFileContent = (filepath) => {
-	return fs.readFileSync(filepath).toString().split('/* __AUTO-DOC-PRINT-AFTER__ */').pop();
+	return fs
+		.readFileSync(filepath)
+		.toString()
+		.split('/* __AUTO-DOC-PRINT-AFTER__ */')
+		.pop();
 };
 
 /**
@@ -85,7 +89,10 @@ const getFixtureRuleContent = (rule, fixturesPaths) => {
 			if (fs.existsSync(filepath)) {
 				const code = getFileContent(filepath);
 				const lang = path.extname(filepath).slice(1);
-				return [`\n${validCase ? '👍 Use' : '🚧 Avoid'}\n`, `\`\`\`${lang}\n${code}\`\`\``].join('\n');
+				return [
+					`\n${validCase ? '👍 Use' : '🚧 Avoid'}\n`,
+					`\`\`\`${lang}\n${code}\`\`\``,
+				].join('\n');
 			}
 		}
 		return undefined;
@@ -93,7 +100,7 @@ const getFixtureRuleContent = (rule, fixturesPaths) => {
 
 	return [
 		getRuleFixtureCode(normalizeName(rule + '.invalid'), false),
-		getRuleFixtureCode(normalizeName(rule + '.valid'), true)
+		getRuleFixtureCode(normalizeName(rule + '.valid'), true),
 	].filter(Boolean);
 };
 
@@ -131,7 +138,10 @@ const generateRulesDescription = (configRules, fixturesPaths) => {
 				if (typeof value === 'string') {
 					val = `\`"${value}"\``;
 				} else if (typeof value === 'object') {
-					val = '\n```json\n' + JSON.stringify(value, undefined, '    ') + '\n```';
+					val =
+						'\n```json\n' +
+						JSON.stringify(value, undefined, '    ') +
+						'\n```';
 				} else {
 					val = `\`${value}\``;
 				}
@@ -150,7 +160,9 @@ const generateRulesDescription = (configRules, fixturesPaths) => {
 
 			return block.join('\n');
 		})
-		.join('\n\n[🔙 Back to the README](README.md) | [🔝 Top](#readme)\n\n---\n\n');
+		.join(
+			'\n\n[🔙 Back to the README](README.md) | [🔝 Top](#readme)\n\n---\n\n'
+		);
 };
 
 /**
@@ -178,7 +190,10 @@ const updateRulesContent = (rulesPath, toc, rulesDescriptions) => {
 	const configRules = getConfigRules(folderPath);
 	const fixturesPaths = getAllFixturesPaths(folderPath);
 	const toc = generateTOC(configRules);
-	const rulesDescriptions = generateRulesDescription(configRules, fixturesPaths);
+	const rulesDescriptions = generateRulesDescription(
+		configRules,
+		fixturesPaths
+	);
 	const rulesPath = path.join(folderPath, 'RULES.md');
 	updateRulesContent(rulesPath, toc, rulesDescriptions);
 })();

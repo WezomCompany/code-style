@@ -38,7 +38,10 @@ _.eslintrc.json_
 		},
 		{
 			"files": ["*.tsx"],
-			"extends": ["@wezom/eslint-config-ts-react", "eslint-config-prettier"],
+			"extends": [
+				"@wezom/eslint-config-ts-react",
+				"eslint-config-prettier"
+			],
 			"parserOptions": {
 				"project": "./tsconfig.json"
 			}

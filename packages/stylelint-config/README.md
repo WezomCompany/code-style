@@ -32,10 +32,10 @@ _package.json_
 ```json
 {
 	"scripts": {
-	    "test": "npm run prettier && npm run stylelint",
+		"test": "npm run prettier && npm run stylelint",
 		"stylelint": "stylelint src/**/*.css",
 		"stylelint:autofix": "npm run stylelint -- --fix",
-        "prettier": "prettier src/ --check",
+		"prettier": "prettier src/ --check",
 		"prettier:autofix": "npm run prettier -- --write"
 	}
 }

@@ -6,6 +6,10 @@
  */
 module.exports = ({ errorCount, results }) => {
 	if (errorCount > 0) {
-		console.log(results.map(({ messages }) => messages.filter(({ severity }) => severity === 2)));
+		console.log(
+			results.map(({ messages }) =>
+				messages.filter(({ severity }) => severity === 2)
+			)
+		);
 	}
 };

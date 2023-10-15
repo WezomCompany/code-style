@@ -33,10 +33,10 @@ _package.json_
 ```json
 {
 	"scripts": {
-	    "test": "npm run prettier && npm run eslint",
+		"test": "npm run prettier && npm run eslint",
 		"eslint": "eslint src/**/*.js",
 		"eslint:autofix": "npm run eslint -- --fix",
-        "prettier": "prettier src/ --check",
+		"prettier": "prettier src/ --check",
 		"prettier:autofix": "npm run prettier -- --write"
 	}
 }

@@ -44,7 +44,10 @@
 			"always",
 			{ "exceptAfterSingleLine": true }
 		],
-		"new-cap": ["error", { "newIsCap": true, "capIsNew": false, "properties": true }],
+		"new-cap": [
+			"error",
+			{ "newIsCap": true, "capIsNew": false, "properties": true }
+		],
 		"no-array-constructor": "error",
 		"no-async-promise-executor": "error",
 		"no-caller": "error",
@@ -147,7 +150,10 @@
 		"one-var": ["error", { "initialized": "never" }],
 		"prefer-const": ["error", { "destructuring": "all" }],
 		"prefer-promise-reject-errors": "error",
-		"prefer-regex-literals": ["error", { "disallowRedundantWrapping": true }],
+		"prefer-regex-literals": [
+			"error",
+			{ "disallowRedundantWrapping": true }
+		],
 		"spaced-comment": [
 			"error",
 			"always",
@@ -155,7 +161,14 @@
 				"line": { "markers": ["*package", "!", "/", ",", "="] },
 				"block": {
 					"balanced": true,
-					"markers": ["*package", "!", ",", ":", "::", "flow-include"],
+					"markers": [
+						"*package",
+						"!",
+						",",
+						":",
+						"::",
+						"flow-include"
+					],
 					"exceptions": ["*"]
 				}
 			}

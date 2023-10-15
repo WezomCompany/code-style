@@ -588,7 +588,7 @@ class FooBar {
 enum MySeasons {
 	mySeason1 = 'xXx',
 	mySeason2 = 'yYy',
-	mySeason3 = 'zZz'
+	mySeason3 = 'zZz',
 }
 ```
 
@@ -607,7 +607,7 @@ const Obj = {};
 
 const obj = {
 	no_camel_case_destructured_var: true,
-	camelCased: true
+	camelCased: true,
 };
 const { no_camel_case_destructured_var, camelCased } = obj;
 
@@ -637,7 +637,7 @@ const obj2 = {
 	_pseudo_private_field: true,
 	objMethod(): void {
 		console.log(this.objProp);
-	}
+	},
 };
 
 class FooBar {
@@ -691,13 +691,13 @@ abstract class MyClass {}
 enum MyList {
 	X,
 	Y,
-	Z
+	Z,
 }
 
 enum MySeasons {
 	MySeason1 = 'xXx',
 	MySeason2 = 'yYy',
-	MySeason3 = 'zZz'
+	MySeason3 = 'zZz',
 }
 ```
 

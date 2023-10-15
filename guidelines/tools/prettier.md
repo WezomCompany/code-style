@@ -19,10 +19,10 @@ the [Prettier docs](https://prettier.io/docs/en/integrating-with-linters.html)
 	"arrowParens": "always",
 	"bracketSpacing": true,
 	"bracketSameLine": false,
-	"printWidth": 120,
+	"printWidth": 80,
 	"semi": true,
 	"singleQuote": true,
-	"trailingComma": "none",
+	"trailingComma": "es5",
 	"tabWidth": 4,
 	"useTabs": true
 }

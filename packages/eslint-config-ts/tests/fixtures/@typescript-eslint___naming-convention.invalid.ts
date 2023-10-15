@@ -5,19 +5,16 @@ export const blank = true;
 
 // typeLike
 
-class fooBar {
-}
+class fooBar {}
 
 interface myInterface {
 	myProp: boolean;
-	myMethod (): void;
+	myMethod(): void;
 }
 
 type MY_TYPE = string;
 
-abstract class my_class {
-
-}
+abstract class my_class {}
 
 class FooBar {
 	private PrivateField = true;
@@ -31,5 +28,5 @@ class FooBar {
 enum MySeasons {
 	mySeason1 = 'xXx',
 	mySeason2 = 'yYy',
-	mySeason3 = 'zZz'
+	mySeason3 = 'zZz',
 }

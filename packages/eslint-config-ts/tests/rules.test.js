@@ -7,7 +7,7 @@ const printIfErrors = require('../../../utils/printIfErrors');
 describe('Rules', () => {
 	const cli = new eslint.CLIEngine({
 		useEslintrc: false,
-		configFile: '.eslintrc.dev.js'
+		configFile: '.eslintrc.dev.js',
 	});
 	const { valid, invalid } = getFixtures('tests/fixtures/*.ts');
 	describe('Valid cases', () => {
@@ -24,7 +24,10 @@ describe('Rules', () => {
 		invalid.forEach((file) => {
 			const fileName = path.basename(file);
 			describe(fileName, () => {
-				const expectedErrorsCount = getExpectedProblemsCount(file, 'errors');
+				const expectedErrorsCount = getExpectedProblemsCount(
+					file,
+					'errors'
+				);
 				if (typeof expectedErrorsCount === 'number') {
 					test(`expect ${expectedErrorsCount} errors`, () => {
 						const result = cli.executeOnFiles(file);

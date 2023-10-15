@@ -13,7 +13,10 @@
 		"import/no-amd": "error",
 		"import/no-anonymous-default-export": "error",
 
-		"react/forbid-foreign-prop-types": ["error", { "allowInPropTypes": true }],
+		"react/forbid-foreign-prop-types": [
+			"error",
+			{ "allowInPropTypes": true }
+		],
 		"react/jsx-no-comment-textnodes": "error",
 		"react/jsx-no-duplicate-props": "error",
 		"react/jsx-no-target-blank": "error",
